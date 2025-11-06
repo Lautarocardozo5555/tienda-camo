@@ -202,32 +202,39 @@ margin: 0 auto;
 }
 
 /*Cuarta seccion (contacto.html)*/
+/*parrafo para comunicarse*/
+.formulario-de-contacto p{
+    font-size: 1.1rem;
+    color: #424242;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
 /*Formulario de contacto*/
-.form input,
-form textarea {
+.formulario-personalizado input,
+.formulario-personalizado textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 0.5rem;
     transition: all 0.3s ease;
 }
 
-.form input:focus,
-form textarea:focus {
+.formulario-personalizado input:focus,
+.formulario-personalizado textarea:focus {
     border-color: #000;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.form input:valid,
-form textarea:valid {
+.formulario-personalizado input:valid,
+.formulario-personalizado textarea:valid {
     border-color: #28a745;
 }
 
-.form input:invalid,
-form textarea:invalid {
+.formulario-personalizado input:invalid,
+.formulario-personalizado textarea:invalid {
     border-color: #dc3545;
 }
 
-.form ::placeholder {
+.formulario-personalizado ::placeholder {
     color: #666;
     font-style: italic;
 }
@@ -253,6 +260,13 @@ form textarea:invalid {
 }
 
 /*Quinta seccion (ayuda.html)*/
+/*acordeon de preguntas*/
+.texto-ayuda {
+font-size: 1.1rem;
+color: #424242;
+margin-bottom: 1rem;
+font-style: italic;
+}
 /*Más ayuda*/
 .alert a{
 color: inherit;
@@ -264,7 +278,9 @@ font-weight: inherit;
     padding: 48px 16px;
     background-color: #f5f5f5;
     text-align: center;
-    color: #111;
+    color: #424242;
+    font-size: 1.1rem;
+    font-style: italic;
 }
 .grilla-asesores{
     display: grid;
@@ -413,32 +429,25 @@ form {
     padding: 8px; /* Ajusta el texto para que se vea bien en pantallas chicas */
 }
 }
-/*seccion seis (asesoria de imagen)*/
-/*Overlay de asesores (ajuste de texto)*/
+/*seccion seis (asesoria de imagen) - mobile optimizado*/
 @media (max-width: 576px) {
 .overlay {
-    padding: 16px; /* Reduce el padding del overlay en pantallas chicas */
+opacity: 1;
+position: static;
+background-color: transparent;
+color: #000;
+padding: 16px;
 }
 
 .overlay h3 {
-    font-size: 18px; /* Ajusta el tamaño del nombre del asesor */
+font-size: 18px;
 }
 
 .overlay p {
-    font-size: 14px; /* Ajusta el tamaño del texto descriptivo */
-}
-}
-
-/* Overlay siempre visible en mobile*/
-@media (max-width: 576px) {
-.overlay {
-    opacity: 1; /* Muestra el contenido del asesor sin necesidad de hover */
-    position: static;
-    background-color: transparent;
-    color: #000;
+font-size: 14px;
 }
 
 .asesor img {
-filter: none; /* Quita el filtro en mobile para mostrar la imagen completa */
+filter: none;
 }
 }
