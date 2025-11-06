@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+/*Variables css*/
+:root{
+    --color-principal: #424242;
+    --color-fondo:#f5f5f5;
+    --color-acento: #ccc;
+    --fuente-base: Arial, Helvetica, sans-serif;
+}
+/*index.html*/
+/*Estilo general*/
+body{
+background-color: var(--color-fondo);
+color: var(--color-principal);
+font-family: var(--fuente-base);
+}
+/*Primera seccion (index.html)*/
+/*Encabezado*/
+/*Menú*/
+.menu-navegacion{
+    background-color: #424242;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.menu-navegacion .nav-link{
+    color: #f5f5f5;
+    margin: 0 10px;
+}
+.menu-navegacion .nav-link:hover{
+color: #ccc;
+}
+/*Banner*/
+.banner{
+    background-color: #ccc;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.banner img{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+}
+/*Texto oculto inicialmente*/
+.banner-texto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: #f5f5f5;
+    text-align: center;
+    background-color: rgba(66, 66, 66, 0.6); /* fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+/*Mostrar el texto al pasar el mouse*/
+.banner:hover .banner-texto{
+    opacity: 1;
+}
+.banner-texto h2{
+    font-size: 24px;
+}
+.banner-texto p{
+    font-size: 18px;
+}
+/*Productos destacados*/
+.productos-destacados h2{
+    letter-spacing: 1px;
+}
+.card-title{
+    font-weight: bold;
+    color: #424242;
+}
+.card-text{
+    color: #666;
+}
+/*Conocenos un poco... (debajo del banner)*/
+.mensaje-de-bienvenida{
+    background-color: #f5f5f5;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+.mensaje-de-bienvenida h2{
+letter-spacing: 1px;
+}
+.mensaje-de-bienvenida p{
+max-width: 700px;
+margin: 0 auto;
+}
+/*Segunda seccion (productos.html)*/
+/*Listado de productos*/
+.lista-de-productos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: center;
+}
+/*Cada producto*/
+.producto{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+    transition:0.3s ease;
+}
+.producto:hover{
+    transform: scale(1.03);
+}
+.producto img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+/*Tercera seccion (nosotros.html)*/
+/*Estilo general*/
+.contenedora{
+    background-color:#f5f5f5 ;
+    font-weight: bold;
+    color: #424242;
+}
+/*Separadores*/
+.separador {
+    border: none;
+    height: 2px;
+    width: 60%;
+    background: linear-gradient(to right, #000, #666, #000);
+    margin: 3rem auto;
+    border-radius: 2px;
+}
+/*Quienes somos*/
+.subtitulo{
+    font-size: 1.1rem;
+    color: #424242;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+/*Nuestro equipo*/
+    .equipo-de-trabajo {
+    padding: 2rem 1rem;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+.bloque-equipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+.imagenes-equipo {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.imagenes-equipo img {
+    max-width: 400px;
+    height: 400px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.imagenes-equipo img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+/*Reseñas de nuestros empleados*/
+.grayscale{
+    filter: grayscale(100%);
+    transition: transform 0.3s ease;
+}
+.hover-overlay{
+    transition: opacity 0.4s ease;
+}
+.position-relative:hover .hover-overlay{
+    opacity: 1;
+}
+.position-relative:hover img{
+    transform:scale(1.05)
+}
+.overlay-empleado{
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.empleado-hover:hover .overlay-empleado {
+    opacity: 1;
+}
+
+/*Cuarta seccion (contacto.html)*/
+/*Formulario de contacto*/
+form input,
+form textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+form input:valid,
+form textarea:valid {
+    border-color: #28a745;
+}
+
+form input:invalid,
+form textarea:invalid {
+    border-color: #dc3545;
+}
+
+form ::placeholder {
+    color: #666;
+    font-style: italic;
+}
+/*Info adicional*/
+.info-adicional{
+    color: #424242;
+    padding: 48px 16px;
+}
+.info-adicional h3{
+    font-size: 28px;
+    margin-bottom: 32px;
+    color: #424242;
+}
+.info-contacto{
+    font-size: 18px;
+    line-height: 26px;
+}
+.horarios{
+    display: block;
+    margin-top: 8px;
+    font-size: 18px;
+    color: #424242;
+}
+
+/*Quinta seccion (ayuda.html)*/
+/*Más ayuda*/
+.alert a{
+color: inherit;
+text-decoration: none;
+font-weight: inherit;
+}
+/*Sexta seccion (asesoria-de-imagen)*/
+#asesoria-imagen{
+    padding: 48px 16px;
+    background-color: #f5f5f5;
+    text-align: center;
+    color: #111;
+}
+.grilla-asesores{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    padding: 32px 0;
+}
+/*cada asesor*/
+.asesor{
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #111;
+    transition: transform 0.3s ease;
+}
+.asesor img{
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease;
+}
+.asesor:hover{
+    transform: scale(1.02);
+}
+.asesor:hover img{
+    transform: scale(1.05);
+}
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(20, 20, 20, 0.9);
+color: #f5f5f5;
+opacity: 0;
+transition: opacity 0.4s ease;
+padding: 24px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+}
+
+.asesor:hover .overlay {
+opacity: 1;
+}
+
+/* Tipografía monocromática */
+.overlay h3 {
+font-family: 'Season', sans-serif;
+font-size: 22px;
+margin-bottom: 16px;
+color: #fff;
+text-transform: uppercase;
+}
+
+.overlay p {
+font-size: 15px;
+line-height: 21px;
+color: #ccc;
+}
+
+/*media queries*/
+/*seccion uno (inicio)*/
+@media (max-width: 576px) {
+.banner-texto {
+    opacity: 1; /* Muestra el texto del banner en mobile (no hay hover) */
+    position: static;
+    transform: none;
+    background-color: transparent;
+    padding: 16px;
+}
+@media (hover: hover) {
+.banner:hover .banner-texto {
+    opacity: 1;
+}
+}
+}
+/*seccion dos (productos)*/
+/*Imágenes de productos */
+@media (max-width: 576px) {
+.producto img {
+    height: auto; /* Evita que las imágenes se deformen en pantallas chicas */
+}
+}
+/*Grilla de productos en tablet*/
+@media (max-width: 768px) {
+.lista-de-productos {
+    grid-template-columns: repeat(2, 1fr); /* Muestra 2 productos por fila en tablets */
+}
+}
+
+/* Grilla de productos en celular */
+@media (max-width: 480px) {
+.lista-de-productos {
+    grid-template-columns: 1fr; /* Muestra 1 producto por fila en celulares */
+}
+}
+/*seccion tres (nosotros)*/
+/* Imágenes del equipo */
+@media (max-width: 576px) {
+.imagenes-equipo img {
+    width: 100%;
+    max-width: 100%; /* Asegura que las fotos se adapten al ancho del dispositivo */
+}
+}
+
+/* Reseñas de empleados*/
+@media (max-width: 576px) {
+.overlay-empleado {
+    opacity: 1; /* Muestra el texto de la reseña en mobile */
+    position: static;
+    background-color: transparent;
+    color: #000;
+}
+.empleado-hover img {
+    filter: none; /* Quita el filtro en mobile para mostrar la imagen completa */
+}
+}
+/*seccion cuatro (contactos)*/
+/*Formulario de contacto*/
+@media (max-width: 576px) {
+form {
+    padding: 0 16px; /* Agrega espacio lateral para que los campos no toquen los bordes */
+}
+}
+/*seccion cinco (ayuda)*/
+/*Acordeón de preguntas frecuentes*/
+@media (max-width: 576px) {
+.accordion-button {
+    font-size: 16px;
+    padding: 12px; /* Mejora legibilidad y espacio táctil en mobile */
+}
+}
+/*  Texto debajo de imagen del local*/
+@media (max-width: 576px) {
+.card-text {
+    font-size: 15px;
+    padding: 8px; /* Ajusta el texto para que se vea bien en pantallas chicas */
+}
+}
+/*seccion seis (asesoria de imagen)*/
+/*Overlay de asesores (ajuste de texto)*/
+@media (max-width: 576px) {
+.overlay {
+    padding: 16px; /* Reduce el padding del overlay en pantallas chicas */
+}
+
+.overlay h3 {
+    font-size: 18px; /* Ajusta el tamaño del nombre del asesor */
+}
+
+.overlay p {
+    font-size: 14px; /* Ajusta el tamaño del texto descriptivo */
+}
+}
+
+/* Overlay siempre visible en mobile*/
+@media (max-width: 576px) {
+.overlay {
+    opacity: 1; /* Muestra el contenido del asesor sin necesidad de hover */
+    position: static;
+    background-color: transparent;
+    color: #000;
+}
+
+.asesor img {
+filter: none; /* Quita el filtro en mobile para mostrar la imagen completa */
+}
+}

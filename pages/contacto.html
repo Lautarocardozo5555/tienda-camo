@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactate con Tienda CAMO. Estamos para ayudarte por mail, WhatsApp o en nuestro local.">
+    <title>Contacto - Tienda CAMO</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <!--Encabezado (menu de navegacion y logo)-->
+    <header class="menu-navegacion">
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="/assets/img/logo-camo.png" class="img-fluid" style="max-width: 200px;" alt="Logo de tienda CAMO en blanco y negro"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="productos.html">Productos</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="nosotros.html">Nosotros</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="ayuda.html">Ayuda</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="asesoria-de-imagen.html">Asesoria de Imagen</a>
+        </li>
+    </ul>
+    </div>
+    </div>
+</nav>
+</header>
+<main>
+<!--Formulario de Contacto-->
+<section class="formulario-de-contacto container py-5">
+<h2 class="text-center mb-4">¿Querés comunicarte con nosotros?</h2>
+<p class="text-center mb-4">Completa el siguiente formulario y te responderemos a la brevedad...</p>
+<form action="/submit" method="post" class="mx-auto" style="max-width: 600px;">
+    <div class="mb-3">
+<label for="nombre" class="form-label">Nombre:</label>
+<input type="text" class="form-control" name="nombre" id="nombre" required>
+</div>
+<div class="mb-3">
+<label for="email" class="form-label">Correo electrónico:</label>
+<input type="email" class="form-control" name="email" id="email" required>
+</div>
+<div class="mb-3">
+<label for="mensaje" class="form-label">Mensaje:</label>
+<textarea name="mensaje" class="form-control" id="mensaje" rows="5" required></textarea>
+</div>
+<div class="text-center">
+<button type="submit" class="btn btn-dark px-4">Enviar</button>
+</div>
+</form>
+<hr class="separador">
+</section>
+<!--Información adicional-->
+<section class="info-adicional container py-5">
+<h3 class="text-center mb-4">También podes escribirnos a:</h3>
+<ul class="list-unstyled text-center info-contacto">
+    <li><strong>Email:</strong><a href="mailto:Tiendacamoinfo@gmail.com">Tiendacamoinfo@gmail.com</a></li>
+    <li><strong>Instagram:</strong> @_Tienda.Camo</li>
+    <li><strong>WhatsApp:</strong> 3516986792</li>
+    <li><strong>Dirección:</strong> Te esperamos en Nueva Córdoba 576<br> <span class="horarios">Lunes a Viernes de 10:00am a 18:00pm <br>Sábados de 10:00am a 14:00pm </span></li>
+</ul>
+</section>
+<!--Pie de página-->
+<footer class="footer bg-dark text-light py-4">
+    <div class="container">
+    <div class="row text-center text-md-start">
+    <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Tienda CAMO</h5>
+        <p>&copy; 2025</p>
+    </div>
+    <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Contacto</h5>
+        <p>Email: <a href="mailto:Tiendacamoinfo@gmail.com" class="text-light text-decoration-none">Tiendacamoinfo@gmail.com</a></p>
+        <p>Teléfono: <a href="tel:3516986792" class="text-light text-decoration-none">3516986792</a></p>
+    </div>
+    <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Redes y ubicación</h5>
+        <p>Instagram: @_Tienda.Camo</p>
+        <p>Dirección: Nueva Córdoba 576</p>
+    </div>
+    </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+crossorigin="anonymous"></script>
+</body>
+</html>
