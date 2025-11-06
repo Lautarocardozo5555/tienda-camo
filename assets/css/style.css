@@ -203,7 +203,7 @@ margin: 0 auto;
 
 /*Cuarta seccion (contacto.html)*/
 /*Formulario de contacto*/
-form input,
+.form input,
 form textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -211,23 +211,23 @@ form textarea {
     transition: all 0.3s ease;
 }
 
-form input:focus,
+.form input:focus,
 form textarea:focus {
     border-color: #000;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-form input:valid,
+.form input:valid,
 form textarea:valid {
     border-color: #28a745;
 }
 
-form input:invalid,
+.form input:invalid,
 form textarea:invalid {
     border-color: #dc3545;
 }
 
-form ::placeholder {
+.form ::placeholder {
     color: #666;
     font-style: italic;
 }
@@ -392,6 +392,10 @@ color: #ccc;
 @media (max-width: 576px) {
 form {
     padding: 0 16px; /* Agrega espacio lateral para que los campos no toquen los bordes */
+}
+.form{
+    max-width: 600px;
+    margin: 0 auto;
 }
 }
 /*seccion cinco (ayuda)*/
