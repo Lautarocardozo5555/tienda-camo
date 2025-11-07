@@ -63,6 +63,10 @@ color: #ccc;
     padding: 20px;
     border-radius: 10px;
 }
+.banner:hover .banner-texto {
+    opacity: 1;
+}
+
 /*Mostrar el texto al pasar el mouse*/
 .banner:hover .banner-texto{
     opacity: 1;
@@ -258,6 +262,13 @@ margin: 0 auto;
     font-size: 18px;
     color: #424242;
 }
+/*Parrafos*/
+.texto-ayuda-local {
+font-size: 1.1rem;
+color: #424242;
+margin-bottom: 1rem;
+font-style: italic;
+}
 
 /*Quinta seccion (ayuda.html)*/
 /*acordeon de preguntas*/
@@ -356,13 +367,20 @@ color: #ccc;
     background-color: transparent;
     padding: 16px;
 }
+}
 @media (hover: hover) {
 .banner:hover .banner-texto {
     opacity: 1;
 }
 }
-}
+
 /*seccion dos (productos)*/
+/*Lista de productos*/
+@media (max-width: 576px) {
+.lista-de-productos {
+    padding: 16px;
+}
+}
 /*Imágenes de productos */
 @media (max-width: 576px) {
 .producto img {
@@ -380,6 +398,13 @@ color: #ccc;
 @media (max-width: 480px) {
 .lista-de-productos {
     grid-template-columns: 1fr; /* Muestra 1 producto por fila en celulares */
+}
+}
+/*Boton "ver detalles"*/
+@media (max-width: 576px) {
+.producto button {
+    width: 100%;
+    margin-top: 8px;
 }
 }
 /*seccion tres (nosotros)*/
@@ -403,6 +428,14 @@ color: #ccc;
     filter: none; /* Quita el filtro en mobile para mostrar la imagen completa */
 }
 }
+/*Padding lateral en mobile*/
+@media (max-width: 576px) {
+.presentacion,
+.historia,
+.equipo-de-trabajo {
+padding: 0 16px;
+}
+}
 /*seccion cuatro (contactos)*/
 /*Formulario de contacto*/
 @media (max-width: 576px) {
@@ -412,6 +445,13 @@ form {
 .form{
     max-width: 600px;
     margin: 0 auto;
+}
+}
+/*Info adicional*/
+@media (max-width: 576px) {
+.info-contacto {
+    font-size: 16px;
+    padding: 0 16px;
 }
 }
 /*seccion cinco (ayuda)*/
@@ -429,22 +469,31 @@ form {
     padding: 8px; /* Ajusta el texto para que se vea bien en pantallas chicas */
 }
 }
+/*Botones del indice de navegacion*/
+@media (max-width: 576px) {
+.nav.justify-content-center {
+    flex-direction: column;
+    gap: 12px;
+}
+}
 /*seccion seis (asesoria de imagen) - mobile optimizado*/
 @media (max-width: 576px) {
 .overlay {
 opacity: 1;
 position: static;
 background-color: transparent;
-color: #000;
+color: #333;
 padding: 16px;
 }
 
 .overlay h3 {
 font-size: 18px;
+color: #111;
 }
 
 .overlay p {
 font-size: 14px;
+color: #444;
 }
 
 .asesor img {
