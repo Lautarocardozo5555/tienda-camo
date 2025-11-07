@@ -479,7 +479,7 @@ form {
 /*seccion seis (asesoria de imagen) - mobile optimizado*/
 @media (max-width: 576px) {
 .overlay {
-opacity: 1;
+opacity: 1 !important;
 position: static;
 background-color: transparent;
 color: #333;
