@@ -478,23 +478,29 @@ form {
 }
 /*seccion seis (asesoria de imagen) - mobile optimizado*/
 @media (max-width: 576px) {
-@media (max-width: 576px) {
 #asesoria-imagen .overlay {
     opacity: 1 !important;
     position: static !important;
     background-color: transparent !important;
     color: #333 !important;
     padding: 16px !important;
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: left;
 }
 
 #asesoria-imagen .overlay h3 {
     font-size: 18px;
     color: #111;
+    display: block;
+    margin-bottom: 8px;
 }
 
 #asesoria-imagen .overlay p {
     font-size: 14px;
     color: #444;
+    display: block;
 }
 
 #asesoria-imagen .asesor img {
@@ -503,6 +509,5 @@ form {
 
 #asesoria-imagen .asesor {
     background-color: transparent !important;
-}
 }
 }
