@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+.banner {
+background-color: $color-acento;
+text-align: center;
+position: relative;
+overflow: hidden;
+
+img {
+    width: 100%;
+    height: auto;
+    padding: $espaciado-md;
+    margin: $espaciado-md;
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    @include transicion(opacity);
+    color: $color-fondo;
+    text-align: center;
+    background-color: $color-overlay;
+    padding: $espaciado-md + 4px;
+    border-radius: $radio-lg;
+
+    h2 {
+    font-size: $font-lg;
+    }
+
+    p {
+    font-size: $font-md;
+    }
+}
+
+&:hover .banner-texto {
+    opacity: 1;
+}
+}

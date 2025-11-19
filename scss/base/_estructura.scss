@@ -1,0 +1,14 @@
+html, body {
+margin: 0;
+padding: 0;
+height: auto;
+}
+
+body > footer {
+margin-top: auto;
+}
+.contenido-pagina {
+min-height: 100%;
+display: grid;
+grid-template-rows: auto 1fr auto;
+}

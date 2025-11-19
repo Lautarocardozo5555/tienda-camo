@@ -1,0 +1,48 @@
+@use 'sass:map';
+@use '../abstracts/variables' as *;
+@use '../abstracts/maps' as *;
+
+body {
+background-color: map.get($colores, fondo);
+color: map.get($colores, principal);
+font-family: map.get($fuentes, base);
+}
+
+// Subtítulos generales
+.subtitulo {
+font-size: map.get($tamanos-fuente, md);
+color: map.get($colores, principal);
+margin-bottom: map.get($espaciado, md);
+font-style: italic;
+}
+
+// Texto secundario (ej. card-text, párrafos informativos)
+.card-text,
+.texto-ayuda,
+.texto-ayuda-local,
+.formulario-de-contacto p {
+font-size: map.get($tamanos-fuente, md);
+color: map.get($colores, texto-secundario);
+font-style: italic;
+margin-bottom: map.get($espaciado, md);
+}
+
+// Títulos destacados
+h2 {
+letter-spacing: 1px;
+}
+
+// Overlay de asesoría
+.overlay h3 {
+font-family: map.get($fuentes, secundaria);
+font-size: calc(map.get($tamanos-fuente, md) + 4px);
+margin-bottom: calc(map.get($espaciado, sm) * 2);
+color: map.get($colores, blanco);
+text-transform: uppercase;
+}
+
+.overlay p {
+font-size: map.get($tamanos-fuente, sm);
+line-height: 21px;
+color: map.get($colores, acento);
+}

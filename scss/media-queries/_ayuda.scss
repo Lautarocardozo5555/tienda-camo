@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as *;
+
+// Media queries para ayuda.html
+
+@media (max-width: 576px) {
+.nav.justify-content-center {
+    flex-direction: column;
+    gap: $espaciado-sm;
+    text-align: center;
+}
+
+.btn-outline-secondary {
+    width: 100%;
+    font-size: $font-sm;
+    padding: $espaciado-sm;
+}
+
+.accordion-button {
+    font-size: $font-sm;
+    padding: $espaciado-sm;
+}
+
+.accordion-body {
+    font-size: $font-sm;
+    padding: $espaciado-sm;
+}
+}
+
+@media (max-width: 768px) {
+.accordion-button {
+    text-align: start;
+}
+}

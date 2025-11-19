@@ -1,0 +1,58 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/extend' as *;
+@use '../abstracts/mixins' as *;
+
+// Página de contacto (contacto.html)
+
+.formulario-personalizado {
+background-color: $color-fondo;
+padding: $espaciado-lg;
+border-radius: $radio-md;
+box-shadow: $sombra-suave;
+
+label {
+    font-weight: bold;
+    color: $color-principal;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: $espaciado-sm;
+    margin-bottom: $espaciado-md;
+    border: 1px solid $color-acento;
+    border-radius: $radio-sm;
+    font-family: $fuente-base;
+    font-size: $font-md;
+    @include sombra-input;
+
+    &::placeholder {
+    color: $color-texto-secundario;
+    font-style: italic;
+    }
+
+    &:focus {
+    outline: none;
+    border-color: $color-principal;
+    }
+
+    &.is-valid {
+    border-color: $color-verde;
+    }
+
+    &.is-invalid {
+    border-color: $color-rojo;
+    }
+}
+
+button {
+    margin-top: $espaciado-md;
+}
+}
+
+.info-contacto {
+font-size: $font-md;
+color: $color-texto-secundario;
+font-style: italic;
+margin-bottom: $espaciado-md;
+}

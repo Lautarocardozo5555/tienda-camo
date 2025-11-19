@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Media queries para productos.html
+
+@media (max-width: 768px) {
+.lista-de-productos {
+    grid-template-columns: 1fr;
+    padding: $espaciado-md;
+}
+}
+
+@media (max-width: 576px) {
+.producto {
+    padding: $espaciado-sm;
+
+    img {
+    height: auto;
+    }
+
+    button {
+    width: 100%;
+    margin-top: $espaciado-sm;
+    }
+}
+}

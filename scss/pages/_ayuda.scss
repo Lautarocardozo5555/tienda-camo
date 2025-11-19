@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+// Página de ayuda (ayuda.html)
+
+.accordion {
+margin-bottom: $espaciado-lg;
+
+.accordion-button {
+    font-size: $font-md;
+    font-weight: bold;
+    color: $color-principal;
+    background-color: $color-fondo;
+    border: 1px solid $color-acento;
+    @include transicion(all);
+
+    &:hover {
+    background-color: $color-acento;
+    color: $color-blanco;
+    }
+
+    &:focus {
+    box-shadow: $sombra-input;
+    }
+}
+
+.accordion-body {
+    font-size: $font-md;
+    color: $color-texto-secundario;
+    font-style: italic;
+    padding: $espaciado-md;
+}
+}
+
+.nav.justify-content-center {
+flex-wrap: wrap;
+gap: $espaciado-md;
+text-align: center;
+}

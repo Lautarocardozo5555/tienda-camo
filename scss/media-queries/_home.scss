@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+// Media queries para ayuda.html
+
+// Índice de navegación en mobile
+.nav.justify-content-center {
+@media (max-width: 576px) {
+    flex-direction: column;
+    gap: $espaciado-sm;
+    text-align: center;
+}
+}
+
+// Botones secundarios en mobile
+.btn-outline-secondary {
+@media (max-width: 576px) {
+    width: 100%;
+    font-size: $font-sm;
+    padding: $espaciado-sm;
+}
+}
+
+// Acordeón en mobile
+.accordion-button {
+@media (max-width: 576px) {
+    font-size: $font-sm;
+    padding: $espaciado-sm;
+}
+
+@media (max-width: 768px) {
+    text-align: start;
+}
+}
+
+.accordion-body {
+@media (max-width: 576px) {
+    font-size: $font-sm;
+    padding: $espaciado-sm;
+}
+}

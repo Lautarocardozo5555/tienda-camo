@@ -1,0 +1,33 @@
+@use 'variables' as *;
+// Imagen en escala de grises con transición
+%grayscale {
+filter: grayscale(100%);
+transition: transform 0.3s ease;
+}
+
+// Overlay con transición de opacidad
+%hover-overlay {
+transition: opacity 0.4s ease;
+}
+
+// Overlay oculto que aparece al hacer hover
+%overlay-empleado {
+opacity: 0;
+transition: opacity 0.4s ease;
+}
+
+// Escalado al hacer hover
+%hover-scale {
+transition: transform 0.3s ease;
+&:hover {
+transform: scale(1.05);
+}
+}
+
+// Sombra suave con hover
+%sombra-suave {
+box-shadow: $sombra-suave;
+&:hover {
+box-shadow: $sombra-hover;
+}
+}

@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+background-color: $color-principal;
+color: $color-fondo;
+padding: $espaciado-md 0;
+
+.container {
+    .row {
+    text-align: center;
+
+    @media (min-width: 768px) {
+        text-align: start;
+    }
+
+    .col-md-4 {
+        margin-bottom: $espaciado-md;
+
+        h5 {
+        font-weight: bold;
+        }
+
+        a {
+        color: $color-fondo;
+        text-decoration: none;
+        }
+    }
+    }
+}
+}

@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.titulo-seccion {
+font-family: $fuente-secundaria;
+font-size: $font-xl;
+color: $color-principal;
+text-transform: uppercase;
+text-align: center;
+margin-bottom: $espaciado-md;
+}
+
+.subtitulo {
+font-size: $font-md;
+line-height: 1.6;
+color: $color-texto;
+text-align: center;
+margin-bottom: $espaciado-md;
+}
+
+.texto-parrafo {
+font-size: $font-sm;
+line-height: 1.6;
+color: $color-negro;
+margin-bottom: $espaciado-md;
+text-align: center;
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.separador {
+border: none;
+height: 2px;
+background-color: $color-principal;
+margin: $espaciado-lg auto;
+width: 60%;
+}

@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/extend' as *;
+
+// Página de equipo (nosotros.html)
+
+.imagenes-equipo {
+display: flex;
+justify-content: center;
+gap: $espaciado-lg;
+flex-wrap: wrap;
+
+img {
+    max-width: 400px;
+    height: 400px;
+    border-radius: $radio-sm;
+    @extend %grayscale;
+    @extend %sombra-suave;
+}
+}
+
+.bloque-equipo {
+text-align: center;
+padding: $espaciado-md;
+
+h3 {
+    font-size: $font-lg;
+    color: $color-principal;
+    margin-bottom: $espaciado-sm;
+}
+
+p {
+    font-size: $font-md;
+    color: $color-texto-secundario;
+    font-style: italic;
+}
+}

@@ -1,0 +1,34 @@
+@use 'variables' as *;
+// Transición genérica
+@mixin transicion($propiedad, $duracion: 0.3s, $tipo: ease) {
+transition: $propiedad $duracion $tipo;
+}
+
+// Escalado al hacer hover
+@mixin hover-scale($escala: 1.03) {
+transition: transform 0.3s ease;
+&:hover {
+transform: scale($escala);
+}
+}
+
+// Sombra suave con efecto hover
+@mixin sombra-suave($color: $sombra-suave, $hover-color: $sombra-hover) {
+box-shadow: $color;
+&:hover {
+box-shadow: $hover-color;
+}
+}
+
+// Sombra para inputs en foco
+@mixin sombra-input {
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+// Grid responsivo
+@mixin grid-responsive($min: 280px, $max: 1fr) {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax($min, $max));
+gap: $espaciado-lg;
+justify-content: center;
+}

@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+
+// Media queries para nosotros.html
+
+@media (max-width: 768px) {
+.imagenes-equipo {
+    flex-direction: column;
+    align-items: center;
+    gap: $espaciado-md;
+
+    img {
+    max-width: 100%;
+    height: auto;
+    }
+}
+}
+
+@media (max-width: 576px) {
+.bloque-equipo {
+    padding: $espaciado-sm;
+    text-align: center;
+}
+
+.equipo-de-trabajo h2 {
+    font-size: $font-lg;
+}
+
+.equipo-de-trabajo p {
+    font-size: $font-sm;
+}
+}

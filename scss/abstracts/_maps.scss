@@ -1,0 +1,49 @@
+@use 'variables' as *;
+// Mapa de colores
+$colores: (
+principal: $color-principal,
+fondo: $color-fondo,
+acento: $color-acento,
+texto-secundario: $color-texto-secundario,
+overlay: $color-overlay,
+negro: $color-negro,
+blanco: $color-blanco,
+verde: $color-verde,
+rojo: $color-rojo
+);
+
+// Mapa de fuentes
+$fuentes: (
+base: $fuente-base,
+secundaria: $fuente-secundaria
+);
+
+// Mapa de tamaños de fuente
+$tamanos-fuente: (
+sm: $font-sm,
+md: $font-md,
+lg: $font-lg,
+xl: $font-xl
+);
+
+// Mapa de espaciado
+$espaciado: (
+sm: $espaciado-sm,
+md: $espaciado-md,
+lg: $espaciado-lg,
+xl: $espaciado-xl
+);
+
+// Mapa de bordes
+$bordes: (
+sm: $radio-sm,
+md: $radio-md,
+lg: $radio-lg
+);
+
+// Mapa de sombras
+$sombras: (
+suave: $sombra-suave,
+hover: $sombra-hover,
+input: $sombra-input
+);

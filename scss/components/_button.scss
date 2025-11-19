@@ -1,0 +1,39 @@
+@use 'sass:map';
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/maps' as *;
+
+// Botones del índice de navegación (ayuda.html)
+.nav.justify-content-center {
+flex-wrap: wrap;
+gap: map.get($espaciado, md);
+text-align: center;
+
+@media (max-width: 576px) {
+    flex-direction: column;
+    gap: calc(map.get($espaciado, sm) + 4px);
+}
+}
+
+// Botones secundarios (ej. filtros, acordeón, formularios)
+.btn-outline-secondary {
+font-size: map.get($tamanos-fuente, md);
+padding: map.get($espaciado, sm) map.get($espaciado, md);
+border: 1px solid map.get($colores, acento);
+color: map.get($colores, principal);
+background-color: transparent;
+@include transicion(all);
+
+&:hover {
+    background-color: map.get($colores, acento);
+    color: map.get($colores, blanco);
+}
+}
+
+// Botones en formularios (mobile)
+.producto button {
+@media (max-width: 576px) {
+    width: 100%;
+    margin-top: map.get($espaciado, sm);
+}
+}

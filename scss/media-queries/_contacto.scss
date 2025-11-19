@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Media queries para contacto.html
+
+@media (max-width: 768px) {
+.formulario-personalizado {
+    padding: $espaciado-md;
+}
+
+.info-contacto {
+    font-size: $font-sm;
+    padding: 0 $espaciado-sm;
+}
+}
+
+@media (max-width: 576px) {
+.formulario-personalizado input,
+.formulario-personalizado textarea {
+    font-size: $font-sm;
+    padding: $espaciado-sm;
+}
+
+.formulario-personalizado button {
+    width: 100%;
+}
+}

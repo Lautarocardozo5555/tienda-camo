@@ -1,0 +1,53 @@
+.formulario-personalizado {
+  background-color: #f5f5f5;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.formulario-personalizado label {
+  font-weight: bold;
+  color: #424242;
+}
+.formulario-personalizado input,
+.formulario-personalizado textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.formulario-personalizado input::-moz-placeholder, .formulario-personalizado textarea::-moz-placeholder {
+  color: #666;
+  font-style: italic;
+}
+.formulario-personalizado input::placeholder,
+.formulario-personalizado textarea::placeholder {
+  color: #666;
+  font-style: italic;
+}
+.formulario-personalizado input:focus,
+.formulario-personalizado textarea:focus {
+  outline: none;
+  border-color: #424242;
+}
+.formulario-personalizado input.is-valid,
+.formulario-personalizado textarea.is-valid {
+  border-color: #28a745;
+}
+.formulario-personalizado input.is-invalid,
+.formulario-personalizado textarea.is-invalid {
+  border-color: #dc3545;
+}
+.formulario-personalizado button {
+  margin-top: 16px;
+}
+
+.info-contacto {
+  font-size: 18px;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 16px;
+}/*# sourceMappingURL=form.css.map */

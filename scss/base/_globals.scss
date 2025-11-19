@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+
+// Separador decorativo
+.separador {
+border: none;
+height: 2px;
+width: 60%;
+background: linear-gradient(to right, $color-negro, $color-texto-secundario, $color-negro);
+margin: $espaciado-lg auto;
+border-radius: $radio-sm;
+}
+
+// Sección de bienvenida debajo del banner
+.mensaje-de-bienvenida {
+background-color: $color-fondo;
+border-top: 2px solid $color-acento;
+border-bottom: 2px solid $color-acento;
+
+h2 {
+    letter-spacing: 1px;
+}
+
+p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+}
+
+// Fondo general de secciones
+.contenedora,
+.equipo-de-trabajo,
+#asesoria-imagen {
+background-color: $color-fondo;
+color: $color-principal;
+}
+html {
+background-color: $color-fondo; // gris claro, beige, o el que uses
+}

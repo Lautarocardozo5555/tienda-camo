@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *;
+
+.menu-navegacion {
+background-color: $color-principal;
+padding: $espaciado-sm $espaciado-lg;
+font-size: $font-md;
+font-weight: bold;
+position: sticky;
+top: 0;
+z-index: 1000;
+
+.nav-link {
+    color: $color-fondo;
+    margin: 0 $espaciado-sm;
+
+    &:hover {
+    color: $color-acento;
+    }
+
+    &.active {
+    color: $color-acento;
+    }
+}
+}

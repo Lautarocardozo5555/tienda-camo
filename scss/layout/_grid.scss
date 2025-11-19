@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/extend' as *;
+
+// Grilla de productos (productos.html)
+.lista-de-productos {
+@include grid-responsive(280px, 1fr);
+padding: $espaciado-lg;
+background-color: $color-fondo;
+max-width: 1400px;
+margin: 0 auto;
+}
+
+// Cada producto
+.producto {
+background-color: $color-blanco;
+border: 1px solid $color-acento;
+padding: $espaciado-md;
+text-align: center;
+@include transicion(transform);
+@include hover-scale(1.03);
+
+img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: $radio-sm;
+}
+}
+
+// Grilla de asesores (asesoria-de-imagen.html)
+.grilla-asesores {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: $espaciado-lg;
+padding: $espaciado-lg 0;
+}
+
+// Imágenes del equipo (nosotros.html)
+.imagenes-equipo {
+display: flex;
+justify-content: center;
+gap: $espaciado-lg;
+flex-wrap: wrap;
+
+img {
+    max-width: 400px;
+    height: 400px;
+    border-radius: $radio-sm;
+    @extend %grayscale;
+    @extend %sombra-suave;
+}
+}
+
+// Bloque de equipo
+.bloque-equipo {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: $espaciado-md;
+text-align: center;
+}

@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as *;
+
+// Media queries para asesoria-de-imagen.html
+
+@media (max-width: 768px) {
+.grilla-asesores {
+    grid-template-columns: 1fr;
+    gap: $espaciado-md;
+    padding: $espaciado-md 0;
+}
+}
+
+@media (max-width: 576px) {
+.overlay-empleado {
+    padding: $espaciado-sm;
+
+    h3 {
+    font-size: $font-md;
+    }
+
+    p {
+    font-size: $font-sm;
+    }
+}
+
+.empleado-hover {
+    border-radius: $radio-sm;
+}
+
+.testimonios__lista {
+    grid-template-columns: 1fr;
+}
+}
