@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bienvenido a Tienda CAMO. Conocé nuestra nueva colección primavera-verano 2025.">
+    <meta name="description" content="Bienvenido a Tienda CAMO. Moda con identidad en Córdoba: estilo, calidad y asesoría de imagen personalizada.">
+    <meta name="keywords" content="Tienda CAMO, moda Córdoba, ropa con estilo, asesoría de imagen, tienda de ropa, identidad">
     <title>Tienda CAMO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -40,62 +42,197 @@
         <li class="nav-item">
         <a class="nav-link" href="pages/asesoria-de-imagen.html">Asesoria de Imagen</a>
         </li>
+
+        <!-- Lupa -->
+        <li class="nav-item">
+        <a class="nav-link" href="#" onclick="mostrarBuscador()">
+        <i class="bi bi-search"></i>
+        </a>
+        </li>
+
+        <!-- Carrito -->
+        <li class="nav-item">
+        <a class="nav-link position-relative" href="pages/carrito.html">
+        <i class="bi bi-cart"></i>
+        <span id="contadorCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+        </a>
+        </li>
+        </ul>
+
+        <!-- Buscador oculto -->
+        <form id="buscador" class="d-flex ms-3" style="display:none;" onsubmit="buscarProducto(event)">
+        <input class="form-control me-2" type="search" id="inputBusqueda" placeholder="Buscar..." aria-label="Buscar">
+        <button class="btn btn-outline-dark" type="submit">Buscar</button>
+        </form>
+
     </ul>
     </div>
     </div>
 </nav>
 </header>
     <main>
-        <!--Banner-->
-    <section class="banner">
-        <div class="banner-texto">
+<!-- Banner rotativo -->
+<section class="banner banner-fade">
+<div id="bannerCamo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+
+    <!-- Banner 1 -->
+    <div class="carousel-item active">
+        <picture>
+        <source srcset="assets/img/banner-camo-1600.webp" media="(min-width: 1200px)" type="image/webp">
+        <source srcset="assets/img/banner-camo-1200.webp" media="(min-width: 768px)" type="image/webp">
+        <source srcset="assets/img/banner-camo-800.webp" media="(max-width: 767px)" type="image/webp">
+        <img src="assets/img/banner-camo-1600.jpg" class="d-block w-100" alt="Banner colección primavera-verano 2025">
+        </picture>
+        <div class="carousel-caption d-none d-md-block">
         <h1 class="display-3 fw-bold text-light text-uppercase mb-3">CAMO</h1>
         <h2>Nueva colección primavera-verano 2025</h2>
-        <p>Colores frescos, telas livianas y estilo único para está temporada</p>
-<a href="pages/productos.html" class="btn btn-outline-light">Ver más</a>
+        <p>Colores frescos, telas livianas y estilo único para esta temporada</p>
+        <a href="pages/productos.html" class="btn btn-outline-light">Ver más</a>
         </div>
-    <img src="assets/img/banner-camo.jpg" alt="Banner de la colección primavera-verano 2025 de CAMO">
+    </div>
+
+    <!-- Banner 2 -->
+    <div class="carousel-item">
+        <picture>
+        <source srcset="assets/img/banner2-1600.webp" media="(min-width: 1200px)" type="image/webp">
+        <source srcset="assets/img/banner2-1200.webp" media="(min-width: 768px)" type="image/webp">
+        <source srcset="assets/img/banner2-800.webp" media="(max-width: 767px)" type="image/webp">
+        <img src="assets/img/banner2-1600.jpg" class="d-block w-100" alt="Banner 2 CAMO">
+        </picture>
+        <div class="carousel-caption d-none d-md-block">
+        <h1 class="display-3 fw-bold text-light text-uppercase mb-3">CAMO</h1>
+        <h2>Nueva colección primavera-verano 2025</h2>
+        <p>Colores frescos, telas livianas y estilo único para esta temporada</p>
+        <a href="pages/productos.html" class="btn btn-outline-light">Ver más</a>
+        </div>
+    </div>
+
+    <!-- Banner 3 -->
+    <div class="carousel-item">
+        <picture>
+        <source srcset="assets/img/banner3-1600.webp" media="(min-width: 1200px)" type="image/webp">
+        <source srcset="assets/img/banner3-1200.webp" media="(min-width: 768px)" type="image/webp">
+        <source srcset="assets/img/banner3-800.webp" media="(max-width: 767px)" type="image/webp">
+        <img src="assets/img/banner3-1600.jpg" class="d-block w-100" alt="Banner 3 CAMO">
+        </picture>
+        <div class="carousel-caption d-none d-md-block">
+        <h1 class="display-3 fw-bold text-light text-uppercase mb-3">CAMO</h1>
+        <h2>Nueva colección primavera-verano 2025</h2>
+        <p>Colores frescos, telas livianas y estilo único para esta temporada</p>
+        <a href="pages/productos.html" class="btn btn-outline-light">Ver más</a>
+        </div>
+    </div>
+
+    <!-- Banner 4 -->
+    <div class="carousel-item">
+        <picture>
+        <source srcset="assets/img/banner4-1600.webp" media="(min-width: 1200px)" type="image/webp">
+        <source srcset="assets/img/banner4-1200.webp" media="(min-width: 768px)" type="image/webp">
+        <source srcset="assets/img/banner4-800.webp" media="(max-width: 767px)" type="image/webp">
+        <img src="assets/img/banner4-1600.jpg" class="d-block w-100" alt="Banner 4 CAMO">
+        </picture>
+        <div class="carousel-caption d-none d-md-block">
+        <h1 class="display-3 fw-bold text-light text-uppercase mb-3">CAMO</h1>
+        <h2>Nueva colección primavera-verano 2025</h2>
+        <p>Colores frescos, telas livianas y estilo único para esta temporada</p>
+        <a href="pages/productos.html" class="btn btn-outline-light">Ver más</a>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCamo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCamo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Siguiente</span>
+    </button>
+
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+    <button type="button" data-bs-target="#bannerCamo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#bannerCamo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#bannerCamo" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#bannerCamo" data-bs-slide-to="3"></button>
+    </div>
+</div>
+</section>
     </section>
     <!--Productos destacados-->
     <section class="productos-destacados py-5 bg-light">
     <div class="container text-center">
     <h2 class="display-6 fw-bold text-dark mb-4">Productos destacados</h2>
     <div class="row justify-content-center">
-    <!-- Producto 1 -->
-    <div class="col-md-4 mb-4">
-        <div class="card h-100">
-        <img src="assets/img/bermudasastrera-camo.jpg" class="card-img-top" alt="Bermuda Sastrera ">
-        <div class="card-body">
-        <h5 class="card-title">Bermuda Sastrera</h5>
-        <p class="card-text">$40.000</p>
-        <a href="pages/productos.html" class="btn btn-outline-dark">Ver producto</a>
-        </div>
-        </div>
+<!-- Producto 1 -->
+<div class="col-md-4 mb-4">
+<div class="card h-100">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="assets/img/bermudasastrera-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="assets/img/bermudasastrera-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="assets/img/bermudasastrera-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="assets/img/bermudasastrera-camo-1200.jpg" class="card-img-top" alt="Bermuda Sastrera">
+    </picture>
+
+    <div class="card-body">
+    <h5 class="card-title">Bermuda Sastrera</h5>
+    <p class="card-text">"Fresca y elegante, ideal para días cálidos con un toque de sofisticado."</p>
+    <p class="card-text">$40.000</p>
+    <a href="pages/productos.html" class="btn btn-outline-dark pulse">Ver producto</a>
     </div>
+</div>
+</div>
 <!-- Producto 2 -->
-    <div class="col-md-4 mb-4">
-        <div class="card h-100">
-        <img src="assets/img/faldasastrera-camo.jpg" class="card-img-top" alt="Falda Sastrera">
-        <div class="card-body">
-        <h5 class="card-title">Falda Sastrera</h5>
-        <p class="card-text">$50.000.</p>
-        <a href="pages/productos.html" class="btn btn-outline-dark">Ver producto</a>
-        </div>
-        </div>
+<div class="col-md-4 mb-4">
+<div class="card h-100">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="assets/img/faldasastrera-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="assets/img/faldasastrera-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="assets/img/faldasastrera-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="assets/img/faldasastrera-camo-1200.jpg" class="card-img-top" alt="Falda Sastrera">
+    </picture>
+
+    <div class="card-body">
+    <h5 class="card-title">Falda Sastrera</h5>
+    <p class="card-text">"Elegancia minimalista, combina con blusas o remeras para un outfit chic."</p>
+    <p class="card-text">$50.000</p>
+    <a href="pages/productos.html" class="btn btn-outline-dark pulse">Ver producto</a>
     </div>
+</div>
+</div>
 <!-- Producto 3 -->
-    <div class="col-md-4 mb-4">
-        <div class="card h-100">
-        <img src="assets/img/pantalonsastrero-camo.jpg" class="card-img-top" alt="Pantalon Sastrero">
-        <div class="card-body">
-        <h5 class="card-title">Pantalon Sastrero</h5>
-        <p class="card-text">$80.000</p>
-        <a href="pages/productos.html" class="btn btn-outline-dark">Ver producto</a>
-        </div>
-        </div>
+<div class="col-md-4 mb-4">
+<div class="card h-100">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="assets/img/pantalonsastrero-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="assets/img/pantalonsastrero-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="assets/img/pantalonsastrero-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="assets/img/pantalonsastrero-camo-1200.jpg" class="card-img-top" alt="Pantalón Sastrero">
+    </picture>
+
+    <div class="card-body">
+    <h5 class="card-title">Pantalón Sastrero</h5>
+    <p class="card-text">"Formal y sofisticado, diseñado para destacar en cualquier ocasión."</p>
+    <p class="card-text">$80.000</p>
+    <a href="pages/productos.html" class="btn btn-outline-dark pulse">Ver producto</a>
     </div>
-    </div>
-    </div>
+</div>
+</div>
 </section>
 <!--Frase debajo del banner-->
 <section class="mensaje-de-bienvenida text-center py-5">
@@ -132,5 +269,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
 crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,41 +1,75 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+
 .banner {
-background-color: $color-acento;
 text-align: center;
 position: relative;
 overflow: hidden;
 
-img {
+.carousel-item img {
     width: 100%;
     height: auto;
-    padding: $espaciado-md;
-    margin: $espaciado-md;
+    object-fit: cover;
 }
 
-.banner-texto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    @include transicion(opacity);
+.carousel-caption {
     color: $color-fondo;
     text-align: center;
     background-color: $color-overlay;
-    padding: $espaciado-md + 4px;
+    padding: $espaciado-md;
     border-radius: $radio-lg;
 
-    h2 {
-    font-size: $font-lg;
+    h2 { font-size: $font-lg; }
+    p { font-size: $font-md; }
+
+    // Hover en textos
+    h2, p {
+    transition: all 0.3s ease-in-out;
     }
 
-    p {
-    font-size: $font-md;
+    h2:hover, p:hover {
+    color: $color-acento;
+    transform: scale(1.05);
     }
 }
 
-&:hover .banner-texto {
+  /* Animaciones opcionales para el carrusel */
+&.banner-fade .carousel-item {
+    animation: fadeBanner 2s ease-in-out forwards;
+}
+
+&.banner-zoom .carousel-item {
+    animation: zoomIn 1.2s ease-in forwards;
+}
+}
+
+/* Keyframes */
+@keyframes fadeBanner {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+from { transform: scale(0.9); opacity: 0; }
+to { transform: scale(1); opacity: 1; }
+}
+
+.banner {
+position: relative;
+
+.carousel-caption {
+    opacity: 0; // oculto por defecto
+    transition: opacity 0.4s ease-in-out;
+    background-color: $color-overlay;
+    padding: $espaciado-md;
+    border-radius: $radio-lg;
+
+    h2 { font-size: $font-lg; }
+    p { font-size: $font-md; }
+}
+
+  // Cuando pasa el mouse sobre el banner, aparece el texto
+&:hover .carousel-caption {
     opacity: 1;
 }
 }

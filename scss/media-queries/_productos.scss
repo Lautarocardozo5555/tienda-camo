@@ -24,3 +24,29 @@
     }
 }
 }
+@media (max-width: 576px) {
+.producto {
+    padding: $espaciado-sm;
+
+    img { height: auto; }
+    button { width: 100%; margin-top: $espaciado-sm; }
+}
+
+  // Animaciones más suaves en mobile
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceCard {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-5px); } // rebote más leve
+    100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.02); } // menos agresivo
+    100% { transform: scale(1); }
+}
+}

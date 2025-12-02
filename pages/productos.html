@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explorá todos los productos de Tienda CAMO. Ropa de calidad, estilo y comodidad.">
+    <meta name="description" content="Descubrí los productos de Tienda CAMO: ropa versátil, cómoda y con estilo. Prendas pensadas para tu día a día.">
+    <meta name="keywords" content="productos CAMO, ropa Córdoba, bermudas, remeras, sastrería, moda argentina, comprar ropa online">
     <title>Productos - Tienda CAMO</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -38,6 +40,28 @@
         <li class="nav-item">
         <a class="nav-link" href="asesoria-de-imagen.html">Asesoria de Imagen</a>
         </li>
+        <!-- Lupa -->
+        <li class="nav-item">
+        <a class="nav-link" href="#" onclick="mostrarBuscador()">
+        <i class="bi bi-search"></i>
+        </a>
+        </li>
+
+        <!-- Carrito -->
+        <li class="nav-item">
+        <a class="nav-link position-relative" href="pages/carrito.html">
+        <i class="bi bi-cart"></i>
+        <span id="contadorCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+        </a>
+        </li>
+        </ul>
+
+        <!-- Buscador oculto -->
+        <form id="buscador" class="d-flex ms-3" style="display:none;" onsubmit="buscarProducto(event)">
+        <input class="form-control me-2" type="search" id="inputBusqueda" placeholder="Buscar..." aria-label="Buscar">
+        <button class="btn btn-outline-dark" type="submit">Buscar</button>
+        </form>
+
     </ul>
     </div>
     </div>
@@ -59,96 +83,291 @@
 <h1 class="text-center my-4">Nuestros productos</h1>
 <div class="container">
 <section class="lista-de-productos">
-    <article class="producto">
-        <img src="../assets/img/bermudasastrera-camo.jpg" alt="Bermuda-sastrera">
-        <h3>Bermuda Sastrera Linea Basic</h3>
-        <p>$40.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/blazer-camo.jpg" alt="blazer">
-        <h3>Blazer Linea Basic</h3>
-        <p>$50.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/bufanda-camo.jpg" alt="bufanda">
-        <h3>Bufanda Linea Basic</h3>
-        <p>$30.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/camisa-camo.jpg" alt="camisa">
-        <h3>Camisa Linea Basic</h3>
-        <p>$30.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/cinto-camo.jpg" alt="cinto">
-        <h3>Cinto Linea Basic</h3>
-        <p>$40.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/croptop-camo.jpg" alt="croptop">
-        <h3>Crop Top Linea Basic</h3>
-        <p>$20.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/faldasastrera-camo.jpg" alt="falda-sastrera">
-        <h3>Falda Sastrera Linea Basic</h3>
-        <p>$50.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/guantes-camo.jpg" alt="guantes">
-        <h3>Guantes Linea Basic</h3>
-        <p>$25.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/musculosa-camo.jpg" alt="musculosa">
-        <h3>Musculosa Linea Basic</h3>
-        <p>$15.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/pantalonsastrero-camo.jpg" alt="pantalon-sastrero">
-        <h3>Pantalon Sastrero Linea Basic</h3>
-        <p>$80.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/pañuelo-camo.jpg" alt="pañuelo">
-        <h3>Pañuelo Linea Basic</h3>
-        <p>$20.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/polera-camo.jpg" alt="polera">
-        <h3>Polera Linea Basic</h3>
-        <p>$30.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/remera-camo.jpg" alt="remera">
-        <h3>Remera Linea Basic</h3>
-        <p>$15.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/remeramangalarga-camo.jpg" alt="remera-manga-larga">
-        <h3>Remera Manga Larga Linea Basic</h3>
-        <p>$25.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button>
-    </article>
-    <article class="producto">
-        <img src="../assets/img/shortsastrero-camo.jpg" alt="short-sastrero">
-        <h3>Short Sastrero Linea Basic</h3>
-        <p>$45.000</p>
-        <button type="button" class="btn btn-outline-secondary">Ver detalles</button> 
-    </article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/bermudasastrera-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/bermudasastrera-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/bermudasastrera-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/bermudasastrera-camo-1200.jpg" alt="Bermuda Sastrera Línea Basic">
+    </picture>
+
+    <h3>Bermuda Sastrera Línea Basic</h3>
+    <p class="card-text">"Fresca y elegante, ideal para días cálidos con un toque de sofisticado."</p>
+    <p>$40.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/blazer-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/blazer-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/blazer-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/blazer-camo-1200.jpg" alt="Blazer Línea Basic">
+    </picture>
+
+    <h3>Blazer Línea Basic</h3>
+    <p class="card-text">"Clásico y versátil, perfecto para elevar cualquier look casual o formal."</p>
+    <p>$50.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/bufanda-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/bufanda-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/bufanda-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/bufanda-camo-1200.jpg" alt="Bufanda Línea Basic">
+    </picture>
+
+    <h3>Bufanda Línea Basic</h3>
+    <p class="card-text">"Suave y abrigada, el accesorio que completa tu outfit en invierno."</p>
+    <p>$30.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/camisa-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/camisa-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/camisa-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/camisa-camo-1200.jpg" alt="Camisa Línea Basic">
+    </picture>
+
+    <h3>Camisa Línea Basic</h3>
+    <p class="card-text">"Confección impecable, cómoda y lista para acompañarte en la oficina o salidas."</p>
+    <p>$30.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/cinto-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/cinto-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/cinto-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/cinto-camo-1200.jpg" alt="Cinto Línea Basic">
+    </picture>
+
+    <h3>Cinto Línea Basic</h3>
+    <p class="card-text">"Resistente y con estilo, el detalle que marca la diferencia en tu atuendo."</p>
+    <p>$40.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/croptop-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/croptop-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/croptop-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/croptop-camo-1200.jpg" alt="Crop Top Línea Basic">
+    </picture>
+
+    <h3>Crop Top Línea Basic</h3>
+    <p class="card-text">"Moderno y fresco, pensado para looks juveniles y descontracturados."</p>
+    <p>$20.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/faldasastrera-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/faldasastrera-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/faldasastrera-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/faldasastrera-camo-1200.jpg" alt="Falda Sastrera Línea Basic">
+    </picture>
+
+    <h3>Falda Sastrera Línea Basic</h3>
+    <p class="card-text">"Elegancia minimalista, combina con blusas o remeras para un outfit chic."</p>
+    <p>$50.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/guantes-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/guantes-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/guantes-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/guantes-camo-1200.jpg" alt="Guantes Línea Basic">
+    </picture>
+
+    <h3>Guantes Línea Basic</h3>
+    <p class="card-text">"Abrigo y estilo en un solo accesorio, ideales para días fríos."</p>
+    <p>$25.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/musculosa-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/musculosa-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/musculosa-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/musculosa-camo-1200.jpg" alt="Musculosa Línea Basic">
+    </picture>
+
+    <h3>Musculosa Línea Basic</h3>
+    <p class="card-text">"Ligera y cómoda, perfecta para entrenar o disfrutar del verano."</p>
+    <p>$15.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/pantalonsastrero-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/pantalonsastrero-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/pantalonsastrero-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/pantalonsastrero-camo-1200.jpg" alt="Pantalón Sastrero Línea Basic">
+    </picture>
+
+    <h3>Pantalón Sastrero Línea Basic</h3>
+    <p class="card-text">"Formal y sofisticado, diseñado para destacar en cualquier ocasión."</p>
+    <p>$80.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/pañuelo-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/pañuelo-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/pañuelo-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/pañuelo-camo-1200.jpg" alt="Pañuelo Línea Basic">
+    </picture>
+
+    <h3>Pañuelo Línea Basic</h3>
+    <p class="card-text">"Versátil y elegante, úsalo como accesorio de cuello o bolso."</p>
+    <p>$20.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/polera-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/polera-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/polera-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/polera-camo-1200.jpg" alt="Polera Línea Basic">
+    </picture>
+
+    <h3>Polera Línea Basic</h3>
+    <p class="card-text">"Abrigo clásico, suave y adaptable a múltiples estilos."</p>
+    <p>$30.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/remera-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/remera-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/remera-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/remera-camo-1200.jpg" alt="Remera Línea Basic">
+    </picture>
+
+    <h3>Remera Línea Basic</h3>
+    <p class="card-text">"Básica y cómoda, un esencial que nunca pasa de moda."</p>
+    <p>$15.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/remeramangalarga-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/remeramangalarga-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/remeramangalarga-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/remeramangalarga-camo-1200.jpg" alt="Remera Manga Larga Línea Basic">
+    </picture>
+
+    <h3>Remera Manga Larga Línea Basic</h3>
+    <p class="card-text">"Práctica y versátil, ideal para entretiempos y capas livianas."</p>
+    <p>$25.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
+<article class="producto card card-slide-up">
+<div class="producto-inner">
+    <picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/shortsastrero-camo-1200.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/shortsastrero-camo-800.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/shortsastrero-camo-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback JPG -->
+    <img src="../assets/img/shortsastrero-camo-1200.jpg" alt="Short Sastrero Línea Basic">
+    </picture>
+
+    <h3>Short Sastrero Línea Basic</h3>
+    <p class="card-text">"Cómodo y moderno, combina frescura con un toque elegante."</p>
+    <p>$45.000</p>
+    <button type="button" class="btn btn-outline-secondary pulse">Ver detalles</button>
+</div>
+</article>
 </section>
 </div>
 </main>
@@ -176,5 +395,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
 crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

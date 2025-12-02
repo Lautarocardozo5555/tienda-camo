@@ -9,12 +9,13 @@
 @use 'scss/base/globals';
 @use 'scss/base/utilities';
 @use 'scss/base/textos';
-@use 'scss/base/estructura';
+
 
 // Layout
 @use 'scss/layout/header';
 @use 'scss/layout/footer';
 @use 'scss/layout/grid';
+
 
 // Components
 @use 'scss/components/banner';
@@ -23,6 +24,8 @@
 @use 'scss/components/form';
 @use 'scss/components/overlay';
 @use 'scss/components/accordion';
+
+
 
 // Pages
 @use 'scss/pages/home';

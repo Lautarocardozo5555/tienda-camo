@@ -29,3 +29,17 @@
     font-size: $font-sm;
 }
 }
+@media (max-width: 576px) {
+.bloque-equipo {
+    padding: $espaciado-sm;
+    text-align: center;
+}
+
+.equipo-de-trabajo h2 { font-size: $font-lg; }
+.equipo-de-trabajo p  { font-size: $font-sm; }
+
+  // Hover más suave en mobile
+.imagenes-equipo img:hover {
+    transform: scale(1.01); // menos agresivo
+}
+}

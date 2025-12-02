@@ -20,5 +20,45 @@ z-index: 1000;
     &.active {
     color: $color-acento;
     }
+
+    // Íconos de lupa y carrito
+    i.bi-search,
+    i.bi-cart {
+      font-size: 1.2rem; // tamaño base
+    }
+}
+
+  // Badge del carrito
+#contadorCarrito {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+}
+
+  // Responsive ajustes
+@media (max-width: 992px) {
+    .nav-link i.bi-search,
+    .nav-link i.bi-cart {
+      font-size: 1.4rem; // íconos más grandes en tablet
+    }
+
+    #contadorCarrito {
+    font-size: 0.7rem;
+    top: 0.25rem;
+    right: 0.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-link i.bi-search,
+    .nav-link i.bi-cart {
+      font-size: 1.6rem; // íconos aún más grandes en mobile
+    }
+
+    #contadorCarrito {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.35rem;
+    top: 0;
+    right: 0;
+    }
 }
 }

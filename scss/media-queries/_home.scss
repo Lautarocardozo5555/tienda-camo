@@ -37,3 +37,59 @@
     padding: $espaciado-sm;
 }
 }
+@media (max-width: 576px) {
+  // Ajustes de animación del banner en mobile
+.banner.banner-zoom {
+    animation: zoomIn 0.8s ease-in forwards; // más rápido
+}
+
+.banner.banner-fade {
+    animation: fadeBanner 1.2s ease-in-out forwards; // duración reducida
+}
+}
+// Carrusel responsive
+@media (max-width: 992px) {
+.banner .carousel-item img {
+    height: 50vh; // altura más baja en tablet
+    object-fit: cover; // que la imagen siempre llene sin deformarse
+}
+
+.banner .carousel-caption {
+    h1 {
+    font-size: 2rem;
+    }
+    h2 {
+    font-size: 1.25rem;
+    }
+    p {
+    font-size: 1rem;
+    }
+    a.btn {
+    font-size: $font-sm;
+    padding: 0.25rem 0.75rem;
+    }
+}
+}
+
+@media (max-width: 576px) {
+.banner .carousel-item img {
+    height: 40vh; // aún más bajo en mobile
+    object-fit: cover;
+}
+
+.banner .carousel-caption {
+    h1 {
+    font-size: 1.5rem;
+    }
+    h2 {
+    font-size: 1rem;
+    }
+    p {
+      display: none; // ocultar texto largo en mobile para que no tape la imagen
+    }
+    a.btn {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    }
+}
+}

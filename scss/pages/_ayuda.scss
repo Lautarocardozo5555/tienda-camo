@@ -36,3 +36,11 @@ flex-wrap: wrap;
 gap: $espaciado-md;
 text-align: center;
 }
+/*imagen del local*/
+.local-img {
+  max-width: 600px;   // limita el ancho
+  width: 100%;        // mantiene responsividad
+  border-radius: $radio-sm; // opcional, esquinas redondeadas
+display: block;
+  margin: 0 auto;     // centra la imagen
+}

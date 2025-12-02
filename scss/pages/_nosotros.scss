@@ -15,6 +15,11 @@ img {
     border-radius: $radio-sm;
     @extend %grayscale;
     @extend %sombra-suave;
+    transition: transform 0.3s ease; // transición suave
+
+    &:hover {
+      transform: scale(1.03); // mismo efecto que las cards
+    }
 }
 }
 

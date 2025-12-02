@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Asesoría de imagen personalizada en Tienda CAMO. Descubrí tu estilo con nuestros expertos.">
+    <meta name="description" content="Asesoría de imagen personalizada en Tienda CAMO. Descubrí tu estilo con nuestros expertos y potenciá tu identidad.">
+    <meta name="keywords" content="asesoría de imagen CAMO, estilo personal Córdoba, asesoría moda, expertos en ropa, confianza y elegancia">
     <title>Asesoria de Imagen - Tienda CAMO</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -38,6 +40,27 @@
         <li class="nav-item">
         <a class="nav-link" href="asesoria-de-imagen.html">Asesoria de Imagen</a>
         </li>
+        <!-- Lupa -->
+        <li class="nav-item">
+        <a class="nav-link" href="#" onclick="mostrarBuscador()">
+        <i class="bi bi-search"></i>
+        </a>
+        </li>
+
+        <!-- Carrito -->
+        <li class="nav-item">
+        <a class="nav-link position-relative" href="pages/carrito.html">
+        <i class="bi bi-cart"></i>
+        <span id="contadorCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+        </a>
+        </li>
+        </ul>
+
+        <!-- Buscador oculto -->
+        <form id="buscador" class="d-flex ms-3" style="display:none;" onsubmit="buscarProducto(event)">
+        <input class="form-control me-2" type="search" id="inputBusqueda" placeholder="Buscar..." aria-label="Buscar">
+        <button class="btn btn-outline-dark" type="submit">Buscar</button>
+        </form>
     </ul>
     </div>
     </div>
@@ -48,48 +71,114 @@
 <h1 class=" titulo-seccion text-center my-4 display-6">Asesoria de Imagen</h1>
 <p class="subtitulo text-center">En CAMO te ayudamos a descubrir tu estilo personal y potenciar tu imagen a través de asesoramiento profesional. Nuestro equipo te guía en la elección de prendas, colores y combinaciones que reflejen tu identidad, adaptándose a tus gustos, cuerpo y objetivos. Porque vestir bien no es seguir reglas: es expresar quién sos.</p>
     <div class="grilla-asesores">
-    <div class="empleado-hover">
-    <img src="../assets/img/silueta.hombre.png" alt=" Silueta masculina representando al asesor Alexis">
-    <div class="overlay-empleado">
-        <h3>Alexis</h3>
-        <p>Proyecta seguridad con un estilo masculino minimalista, funcional y sin excesos.</p>
-    </div>
-    </div>
-    <div class="empleado-hover">
-    <img src="../assets/img/silueta.mujer.png" alt="Silueta femenina representando a la asesora Camila">
-    <div class="overlay-empleado">
+<!--Alexis-->
+<div class="empleado-hover">
+<picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/silueta.hombre-800.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/silueta.hombre-600.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/silueta.hombre-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback PNG -->
+    <img src="../assets/img/silueta.hombre-800.png" alt="Silueta masculina representando al asesor Alexis" class="img-fluid grayscale">
+</picture>
+
+<div class="overlay-empleado">
+    <h3>Alexis</h3>
+    <p>Proyecta seguridad con un estilo masculino minimalista, funcional y sin excesos.</p>
+</div>
+</div>
+<!--Camila-->
+<div class="empleado-hover">
+<picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/silueta.mujer-800.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/silueta.mujer-600.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/silueta.mujer-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback PNG -->
+    <img src="../assets/img/silueta.mujer-800.png" alt="Silueta femenina representando a la asesora Camila" class="img-fluid grayscale">
+</picture>
+
+<div class="overlay-empleado">
     <h3>Camila</h3>
     <p>Observa tu postura y entorno para guiarte hacia combinaciones sobrias y elegantes.</p>
-    </div>
-    </div>
-    <div class="empleado-hover">
-    <img src="../assets/img/silueta.hombre.png" alt="Silueta masculina representando al asesor Lautaro">
-    <div class="overlay-empleado">
+</div>
+</div>
+<!--Lautaro-->
+<div class="empleado-hover">
+<picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/silueta.hombre-800.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/silueta.hombre-600.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/silueta.hombre-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback PNG -->
+    <img src="../assets/img/silueta.hombre-800.png" alt="Silueta masculina representando al asesor Lautaro" class="img-fluid grayscale">
+</picture>
+
+<div class="overlay-empleado">
     <h3>Lautaro</h3>
     <p>Analiza tu silueta y personalidad para lograr una imagen precisa y sin distracciones.</p>
-    </div>
-    </div>
-    <div class="empleado-hover">
-    <img src="../assets/img/silueta.mujer.png" alt="Silueta femenina representando a la asesora Daniela">
-    <div class="overlay-empleado">
+</div>
+</div>
+<!--Daniela-->
+<div class="empleado-hover">
+<picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/silueta.mujer-800.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/silueta.mujer-600.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/silueta.mujer-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback PNG -->
+    <img src="../assets/img/silueta.mujer-800.png" alt="Silueta femenina representando a la asesora Daniela" class="img-fluid grayscale">
+</picture>
+
+<div class="overlay-empleado">
     <h3>Daniela</h3>
     <p>Diseña tu estilo como estrategia visual: líneas claras y contrastes que comunican.</p>
-    </div>
-    </div>
-    <div class="empleado-hover">
-    <img src="../assets/img/silueta.hombre.png" alt="Silueta masculina representando al asesor Dario">
-    <div class="overlay-empleado">
+</div>
+</div>
+<!--Dario-->
+<div class="empleado-hover">
+<picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/silueta.hombre-800.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/silueta.hombre-600.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/silueta.hombre-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback PNG -->
+    <img src="../assets/img/silueta.hombre-800.png" alt="Silueta masculina representando al asesor Dario" class="img-fluid grayscale">
+</picture>
+
+<div class="overlay-empleado">
     <h3>Dario</h3>
     <p>Prioriza funcionalidad y versatilidad con cortes limpios y paleta neutra adaptable.</p>
-    </div>
-    </div>
-    <div class="empleado-hover">
-    <img src="../assets/img/silueta.mujer.png" alt="Silueta femenina representando a la asesora Patricia">
-    <div class="overlay-empleado">
+</div>
+</div>
+<!--Patricia-->
+<div class="empleado-hover">
+<picture>
+    <!-- Desktop -->
+    <source srcset="../assets/img/silueta.mujer-800.webp" media="(min-width: 1200px)" type="image/webp">
+    <!-- Tablet -->
+    <source srcset="../assets/img/silueta.mujer-600.webp" media="(min-width: 768px)" type="image/webp">
+    <!-- Mobile -->
+    <source srcset="../assets/img/silueta.mujer-400.webp" media="(max-width: 767px)" type="image/webp">
+    <!-- Fallback PNG -->
+    <img src="../assets/img/silueta.mujer-800.png" alt="Silueta femenina representando a la asesora Patricia" class="img-fluid grayscale">
+</picture>
+
+<div class="overlay-empleado">
     <h3>Patricia</h3>
     <p>Te acompaña en una transformación profesional, sobria y alineada con tus metas.</p>
-    </div>
-    </div>
+</div>
+</div>
     </div>
 </section>
 <section class="testimonios">
@@ -132,5 +221,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
 crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
