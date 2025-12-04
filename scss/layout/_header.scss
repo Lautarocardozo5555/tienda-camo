@@ -1,15 +1,15 @@
 @use '../abstracts/variables' as *;
 
 .menu-navegacion {
-background-color: $color-principal;
-padding: $espaciado-sm $espaciado-lg;
-font-size: $font-md;
-font-weight: bold;
-position: sticky;
-top: 0;
-z-index: 1000;
+  background-color: $color-principal;
+  padding: $espaciado-sm $espaciado-lg;
+  font-size: $font-md;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-.nav-link {
+  .nav-link {
     color: $color-fondo;
     margin: 0 $espaciado-sm;
 
@@ -18,27 +18,27 @@ z-index: 1000;
     }
 
     &.active {
-    color: $color-acento;
+      color: $color-acento;
     }
 
     // Íconos de lupa y carrito
     i.bi-search,
     i.bi-cart {
-      font-size: 1.2rem; // tamaño base
+    font-size: 1.2rem; // tamaño base
     }
-}
+  }
 
   // Badge del carrito
-#contadorCarrito {
+  #contadorCarrito {
     font-size: 0.75rem;
     padding: 0.2rem 0.4rem;
-}
+  }
 
   // Responsive ajustes
-@media (max-width: 992px) {
+  @media (max-width: 992px) {
     .nav-link i.bi-search,
     .nav-link i.bi-cart {
-      font-size: 1.4rem; // íconos más grandes en tablet
+    font-size: 1.4rem; // íconos más grandes en tablet
     }
 
     #contadorCarrito {
@@ -46,12 +46,21 @@ z-index: 1000;
     top: 0.25rem;
     right: 0.25rem;
     }
-}
+  }
 
-@media (max-width: 576px) {
+  @media (max-width: 576px) {
+    // Ajuste de altura del header en mobile
+    padding: $espaciado-xs $espaciado-sm; // menos padding
+    font-size: $font-sm; // texto más chico
+
+    .nav-link {
+    margin: 0 $espaciado-xs;
+    font-size: $font-sm;
+    }
+
     .nav-link i.bi-search,
     .nav-link i.bi-cart {
-      font-size: 1.6rem; // íconos aún más grandes en mobile
+    font-size: 1.6rem; // íconos aún más grandes en mobile
     }
 
     #contadorCarrito {
@@ -60,5 +69,5 @@ z-index: 1000;
     top: 0;
     right: 0;
     }
-}
+  }
 }

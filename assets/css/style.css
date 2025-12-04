@@ -206,6 +206,14 @@ h2 {
   }
 }
 @media (max-width: 576px) {
+  .menu-navegacion {
+    padding: 4px 8px;
+    font-size: 15px;
+  }
+  .menu-navegacion .nav-link {
+    margin: 0 4px;
+    font-size: 15px;
+  }
   .menu-navegacion .nav-link i.bi-search,
   .menu-navegacion .nav-link i.bi-cart {
     font-size: 1.6rem;
@@ -267,8 +275,7 @@ h2 {
 .producto img {
   width: 100%;
   height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 4px;
 }
 
@@ -303,13 +310,11 @@ h2 {
   text-align: center;
   position: relative;
   overflow: hidden;
-  /* Animaciones opcionales para el carrusel */
 }
 .banner .carousel-item img {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .banner .carousel-caption {
   color: #f5f5f5;
@@ -317,55 +322,8 @@ h2 {
   background-color: rgba(66, 66, 66, 0.6);
   padding: 16px;
   border-radius: 10px;
-}
-.banner .carousel-caption h2 {
-  font-size: 24px;
-}
-.banner .carousel-caption p {
-  font-size: 18px;
-}
-.banner .carousel-caption h2, .banner .carousel-caption p {
-  transition: all 0.3s ease-in-out;
-}
-.banner .carousel-caption h2:hover, .banner .carousel-caption p:hover {
-  color: #ccc;
-  transform: scale(1.05);
-}
-.banner.banner-fade .carousel-item {
-  animation: fadeBanner 2s ease-in-out forwards;
-}
-.banner.banner-zoom .carousel-item {
-  animation: zoomIn 1.2s ease-in forwards;
-}
-
-/* Keyframes */
-@keyframes fadeBanner {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes zoomIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-.banner {
-  position: relative;
-}
-.banner .carousel-caption {
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
-  background-color: rgba(66, 66, 66, 0.6);
-  padding: 16px;
-  border-radius: 10px;
 }
 .banner .carousel-caption h2 {
   font-size: 24px;
@@ -375,6 +333,28 @@ h2 {
 }
 .banner:hover .carousel-caption {
   opacity: 1;
+}
+@media (max-width: 576px) {
+  .banner .carousel-item img {
+    height: 250px;
+    object-fit: cover;
+  }
+  .banner .carousel-caption {
+    opacity: 1;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    font-size: 15px;
+    padding: 8px;
+  }
+  .banner .carousel-caption h2 {
+    font-size: 18px;
+  }
+  .banner .carousel-caption p {
+    font-size: 15px;
+  }
 }
 
 .card-title {
@@ -395,8 +375,7 @@ h2 {
 .producto img {
   width: 100%;
   height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 4px;
 }
 @media (max-width: 576px) {
@@ -509,10 +488,6 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-.formulario-personalizado input::-moz-placeholder, .formulario-personalizado textarea::-moz-placeholder {
-  color: #666;
-  font-style: italic;
 }
 .formulario-personalizado input::placeholder,
 .formulario-personalizado textarea::placeholder {
@@ -649,8 +624,7 @@ h2 {
 .producto img {
   width: 100%;
   height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 4px;
 }
 .producto button {
@@ -708,10 +682,6 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-.formulario-personalizado input::-moz-placeholder, .formulario-personalizado textarea::-moz-placeholder {
-  color: #666;
-  font-style: italic;
 }
 .formulario-personalizado input::placeholder,
 .formulario-personalizado textarea::placeholder {
@@ -797,8 +767,7 @@ h2 {
 .empleado-hover img {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 4px;
 }
 .empleado-hover:hover .overlay-empleado {
@@ -911,8 +880,7 @@ h2 {
 @media (max-width: 992px) {
   .banner .carousel-item img {
     height: 50vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .banner .carousel-caption h1 {
     font-size: 2rem;
@@ -931,8 +899,7 @@ h2 {
 @media (max-width: 576px) {
   .banner .carousel-item img {
     height: 40vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .banner .carousel-caption h1 {
     font-size: 1.5rem;
@@ -1115,4 +1082,6 @@ h2 {
   .testimonios__lista {
     grid-template-columns: 1fr;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

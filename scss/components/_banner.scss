@@ -1,75 +1,61 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-.banner {
-text-align: center;
-position: relative;
-overflow: hidden;
 
-.carousel-item img {
+
+.banner {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .carousel-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+  }
 
-.carousel-caption {
+  .carousel-caption {
     color: $color-fondo;
     text-align: center;
     background-color: $color-overlay;
     padding: $espaciado-md;
     border-radius: $radio-lg;
-
-    h2 { font-size: $font-lg; }
-    p { font-size: $font-md; }
-
-    // Hover en textos
-    h2, p {
-    transition: all 0.3s ease-in-out;
-    }
-
-    h2:hover, p:hover {
-    color: $color-acento;
-    transform: scale(1.05);
-    }
-}
-
-  /* Animaciones opcionales para el carrusel */
-&.banner-fade .carousel-item {
-    animation: fadeBanner 2s ease-in-out forwards;
-}
-
-&.banner-zoom .carousel-item {
-    animation: zoomIn 1.2s ease-in forwards;
-}
-}
-
-/* Keyframes */
-@keyframes fadeBanner {
-from { opacity: 0; }
-to { opacity: 1; }
-}
-
-@keyframes zoomIn {
-from { transform: scale(0.9); opacity: 0; }
-to { transform: scale(1); opacity: 1; }
-}
-
-.banner {
-position: relative;
-
-.carousel-caption {
-    opacity: 0; // oculto por defecto
+    opacity: 0; // oculto por defecto en desktop
     transition: opacity 0.4s ease-in-out;
-    background-color: $color-overlay;
-    padding: $espaciado-md;
-    border-radius: $radio-lg;
 
     h2 { font-size: $font-lg; }
     p { font-size: $font-md; }
-}
+  }
 
-  // Cuando pasa el mouse sobre el banner, aparece el texto
-&:hover .carousel-caption {
+  // Hover en desktop
+  &:hover .carousel-caption {
     opacity: 1;
-}
+  }
+
+  // Ajustes responsive
+  @media (max-width: 576px) {
+    .carousel-item img {
+    height: 250px; // altura fija en mobile
+    object-fit: cover; // asegura que no se corte raro
+    }
+
+    .carousel-caption {
+    opacity: 1; // siempre visible en mobile
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    font-size: $font-sm;
+    padding: $espaciado-sm;
+    }
+
+    .carousel-caption h2 {
+    font-size: $font-md;
+    }
+
+    .carousel-caption p {
+    font-size: $font-sm;
+    }
+  }
 }
