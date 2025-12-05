@@ -28,6 +28,15 @@ El sitio se adapta a distintos tamaños de pantalla mediante media queries perso
 - Cards, grillas y formularios estilizados con Bootstrap y SASS
 - Control de versiones con commits descriptivos y estructura escalable
 
+## Optimización SEO
+
+Cada página del sitio cuenta con optimización SEO básica para mejorar su visibilidad en buscadores:  
+- Uso de **etiquetas meta** (`title`, `description`, `keywords`, `viewport`) personalizadas por página.  
+- Estructura semántica con encabezados jerárquicos (`h1`, `h2`, `h3`) relevantes.  
+- URLs limpias y descriptivas publicadas en GitHub Pages.  
+- Texto alternativo (`alt`) en imágenes para accesibilidad y posicionamiento.  
+- Contenido optimizado con palabras clave relacionadas con moda, estilo minimalista y tienda online.  
+
 ##  Publicación
 
 El sitio está disponible en:  
