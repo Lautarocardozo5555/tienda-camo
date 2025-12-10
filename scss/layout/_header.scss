@@ -8,6 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  line-height: 1.2;
 
   .nav-link {
     color: $color-fondo;
@@ -18,7 +19,7 @@
     }
 
     &.active {
-      color: $color-acento;
+    color: $color-acento;
     }
 
     // Íconos de lupa y carrito
@@ -28,17 +29,22 @@
     }
   }
 
+  //contenedor relativo para el badge
+  position: relative;
   // Badge del carrito
   #contadorCarrito {
+    position: absolute;
     font-size: 0.75rem;
     padding: 0.2rem 0.4rem;
+    top: 0;
+    right: 0;
   }
 
   // Responsive ajustes
   @media (max-width: 992px) {
     .nav-link i.bi-search,
     .nav-link i.bi-cart {
-    font-size: 1.4rem; // íconos más grandes en tablet
+    font-size: 1.25rem; // íconos más grandes en tablet
     }
 
     #contadorCarrito {
@@ -52,6 +58,8 @@
     // Ajuste de altura del header en mobile
     padding: $espaciado-xs $espaciado-sm; // menos padding
     font-size: $font-sm; // texto más chico
+    max-height: 56px; //limite de altura
+    overflow: hidden; //evita que crezca mas
 
     .nav-link {
     margin: 0 $espaciado-xs;
@@ -60,7 +68,7 @@
 
     .nav-link i.bi-search,
     .nav-link i.bi-cart {
-    font-size: 1.6rem; // íconos aún más grandes en mobile
+    font-size: 1.2rem; 
     }
 
     #contadorCarrito {
