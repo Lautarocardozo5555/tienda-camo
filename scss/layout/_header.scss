@@ -9,8 +9,13 @@
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  &.shrink{
+    padding: $espaciado-xs $espaciado-md;
+    font-size: $font-sm;
+  }
 
   .nav-link {
+
     color: $color-fondo;
     margin: 0 $espaciado-sm;
 
@@ -74,26 +79,7 @@
     right: 0;
     }
   }
-
-  // Estado reducido al hacer scroll
-  &.shrink {
-    padding: $espaciado-xs $espaciado-lg;
-    font-size: $font-sm;
-
-    .navbar-brand img {
-    max-height: 100px;
-    }
-  }
 }
 
-// Ajustes base de Bootstrap (estado normal)
-.navbar {
-  padding-top: 0.75rem;   // padding cómodo al inicio
-  padding-bottom: 0.75rem;
-}
 
-.navbar-brand img {
-  max-height: 150px; // logo grande al inicio
-  height: auto;
-  width: auto;
-}
+
