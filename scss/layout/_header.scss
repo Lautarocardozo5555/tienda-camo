@@ -8,7 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  line-height: 1.2;
+  transition: all 0.3s ease;
 
   .nav-link {
     color: $color-fondo;
@@ -29,8 +29,6 @@
     }
   }
 
-  //contenedor relativo para el badge
-  position: relative;
   // Badge del carrito
   #contadorCarrito {
     position: absolute;
@@ -58,8 +56,6 @@
     // Ajuste de altura del header en mobile
     padding: $espaciado-xs $espaciado-sm; // menos padding
     font-size: $font-sm; // texto más chico
-    max-height: 56px; //limite de altura
-    overflow: hidden; //evita que crezca mas
 
     .nav-link {
     margin: 0 $espaciado-xs;
@@ -68,7 +64,7 @@
 
     .nav-link i.bi-search,
     .nav-link i.bi-cart {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     }
 
     #contadorCarrito {
@@ -78,4 +74,26 @@
     right: 0;
     }
   }
+
+  // Estado reducido al hacer scroll
+  &.shrink {
+    padding: $espaciado-xs $espaciado-lg;
+    font-size: $font-sm;
+
+    .navbar-brand img {
+    max-height: 100px;
+    }
+  }
+}
+
+// Ajustes base de Bootstrap (estado normal)
+.navbar {
+  padding-top: 0.75rem;   // padding cómodo al inicio
+  padding-bottom: 0.75rem;
+}
+
+.navbar-brand img {
+  max-height: 150px; // logo grande al inicio
+  height: auto;
+  width: auto;
 }
