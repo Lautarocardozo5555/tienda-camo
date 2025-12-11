@@ -118,11 +118,11 @@
 // Menú hamburguesa desplegable
 .navbar-collapse {
   background-color: $color-principal;
-  position: fixed;   // 👈 cambia relative por fixed
-  top: $altura-header-desktop; // ahora sí funciona
+  position: fixed;  
+  top: $altura-header-desktop;  
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 998;
 
   @media (max-width: 992px) {
     top: $altura-header-tablet;
