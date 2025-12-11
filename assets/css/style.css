@@ -95,6 +95,20 @@ h2 {
   color: #424242;
 }
 
+body {
+  padding-top: 115px;
+}
+@media (max-width: 992px) {
+  body {
+    padding-top: 115px;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    padding-top: 115px;
+  }
+}
+
 .info-adicional {
   color: #424242;
   padding: 48px 16px;
@@ -169,68 +183,113 @@ h2 {
 
 .menu-navegacion {
   background-color: #424242;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   padding: 8px 32px;
   font-size: 18px;
   font-weight: bold;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: all 0.3s ease;
+  transition: padding 0.3s ease;
 }
 .menu-navegacion.shrink {
   padding: 4px 16px;
-  font-size: 15px;
+}
+.menu-navegacion.shrink .navbar-brand img {
+  max-height: 90px;
+}
+.menu-navegacion.shrink .navbar-toggler {
+  padding: 0.25rem 0.5rem;
+}
+.menu-navegacion .navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.menu-navegacion .navbar-brand img {
+  max-width: 300px;
+  max-height: 150px;
+  transition: max-width 0.3s ease, max-height 0.3s ease;
+}
+.menu-navegacion .navbar-toggler {
+  padding: 0.4rem 0.8rem;
+  transition: padding 0.3s ease;
 }
 .menu-navegacion .nav-link {
   color: #f5f5f5;
   margin: 0 8px;
+  font-size: 1.1rem;
 }
-.menu-navegacion .nav-link:hover {
-  color: #ccc;
-}
-.menu-navegacion .nav-link.active {
+.menu-navegacion .nav-link:hover, .menu-navegacion .nav-link.active {
   color: #ccc;
 }
 .menu-navegacion .nav-link i.bi-search,
 .menu-navegacion .nav-link i.bi-cart {
-  font-size: 1.2rem;
-}
-.menu-navegacion #contadorCarrito {
-  position: absolute;
-  font-size: 0.75rem;
-  padding: 0.2rem 0.4rem;
-  top: 0;
-  right: 0;
+  font-size: 1.3rem;
 }
 @media (max-width: 992px) {
-  .menu-navegacion .nav-link i.bi-search,
-  .menu-navegacion .nav-link i.bi-cart {
-    font-size: 1.25rem;
+  .menu-navegacion .navbar-brand img {
+    max-width: 200px;
+    max-height: 100px;
   }
-  .menu-navegacion #contadorCarrito {
-    font-size: 0.7rem;
-    top: 0.25rem;
-    right: 0.25rem;
-  }
-}
-@media (max-width: 576px) {
-  .menu-navegacion {
-    padding: 4px 8px;
-    font-size: 15px;
+  .menu-navegacion .navbar-toggler {
+    padding: 0.3rem 0.6rem;
   }
   .menu-navegacion .nav-link {
-    margin: 0 4px;
-    font-size: 15px;
+    font-size: 1rem;
   }
   .menu-navegacion .nav-link i.bi-search,
   .menu-navegacion .nav-link i.bi-cart {
     font-size: 1.2rem;
   }
-  .menu-navegacion #contadorCarrito {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.35rem;
-    top: 0;
-    right: 0;
+}
+@media (max-width: 576px) {
+  .menu-navegacion {
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+  }
+  .menu-navegacion.shrink {
+    padding: 0.25rem 0.75rem;
+  }
+  .menu-navegacion.shrink .navbar-brand img {
+    max-height: 50px;
+  }
+  .menu-navegacion.shrink .navbar-toggler {
+    padding: 0.2rem 0.4rem;
+  }
+  .menu-navegacion .navbar-brand img {
+    max-width: 180px;
+    max-height: 85px;
+  }
+  .menu-navegacion .navbar-toggler {
+    padding: 0.35rem 0.7rem;
+  }
+  .menu-navegacion .nav-link {
+    font-size: 15px;
+    margin: 0 4px;
+  }
+  .menu-navegacion .nav-link i.bi-search,
+  .menu-navegacion .nav-link i.bi-cart {
+    font-size: 1.1rem;
+  }
+}
+
+.navbar-collapse {
+  background-color: #424242;
+  position: fixed;
+  top: 115px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+@media (max-width: 992px) {
+  .navbar-collapse {
+    top: 115px;
+  }
+}
+@media (max-width: 576px) {
+  .navbar-collapse {
+    top: 115px;
   }
 }
 

@@ -2,84 +2,133 @@
 
 .menu-navegacion {
   background-color: $color-principal;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   padding: $espaciado-sm $espaciado-lg;
   font-size: $font-md;
   font-weight: bold;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: all 0.3s ease;
-  &.shrink{
+  transition: padding 0.3s ease;
+
+  &.shrink {
     padding: $espaciado-xs $espaciado-md;
-    font-size: $font-sm;
+
+    .navbar-brand img {
+    max-height: 90px;
+    }
+
+    .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    }
+  }
+
+  .navbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-brand img {
+    max-width: 300px;
+    max-height: 150px;
+    transition: max-width 0.3s ease, max-height 0.3s ease;
+  }
+
+  .navbar-toggler {
+    padding: 0.4rem 0.8rem;
+    transition: padding 0.3s ease;
   }
 
   .nav-link {
-
     color: $color-fondo;
     margin: 0 $espaciado-sm;
+    font-size: 1.1rem;
 
-    &:hover {
-    color: $color-acento;
-    }
-
+    &:hover,
     &.active {
     color: $color-acento;
     }
 
-    // Íconos de lupa y carrito
     i.bi-search,
     i.bi-cart {
-    font-size: 1.2rem; // tamaño base
+    font-size: 1.3rem;
     }
   }
 
-  // Badge del carrito
-  #contadorCarrito {
-    position: absolute;
-    font-size: 0.75rem;
-    padding: 0.2rem 0.4rem;
-    top: 0;
-    right: 0;
-  }
-
-  // Responsive ajustes
+  // Tablet
   @media (max-width: 992px) {
-    .nav-link i.bi-search,
-    .nav-link i.bi-cart {
-    font-size: 1.25rem; // íconos más grandes en tablet
+    .navbar-brand img {
+    max-width: 200px;
+    max-height: 100px;
     }
 
-    #contadorCarrito {
-    font-size: 0.7rem;
-    top: 0.25rem;
-    right: 0.25rem;
+    .navbar-toggler {
+    padding: 0.3rem 0.6rem;
     }
-  }
-
-  @media (max-width: 576px) {
-    // Ajuste de altura del header en mobile
-    padding: $espaciado-xs $espaciado-sm; // menos padding
-    font-size: $font-sm; // texto más chico
 
     .nav-link {
-    margin: 0 $espaciado-xs;
-    font-size: $font-sm;
-    }
+    font-size: 1rem;
 
-    .nav-link i.bi-search,
-    .nav-link i.bi-cart {
+    i.bi-search,
+    i.bi-cart {
     font-size: 1.2rem;
     }
+    }
+  }
 
-    #contadorCarrito {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.35rem;
-    top: 0;
-    right: 0;
+  // Mobile
+  @media (max-width: 576px) {
+    padding: 0.5rem 1rem;
+    font-size: $font-sm;
+
+    &.shrink {
+    padding: 0.25rem 0.75rem;
+
+    .navbar-brand img {
+    max-height: 50px;
+    }
+
+    .navbar-toggler {
+    padding: 0.2rem 0.4rem;
+    }
+    }
+
+    .navbar-brand img {
+    max-width: 180px;
+    max-height: 85px;
+    }
+
+    .navbar-toggler {
+    padding: 0.35rem 0.7rem;
+    }
+
+    .nav-link {
+    font-size: $font-sm;
+    margin: 0 $espaciado-xs;
+
+    i.bi-search,
+    i.bi-cart {
+    font-size: 1.1rem;
+    }
     }
   }
 }
 
+// Menú hamburguesa desplegable
+.navbar-collapse {
+  background-color: $color-principal;
+  position: fixed;   // 👈 cambia relative por fixed
+  top: $altura-header-desktop; // ahora sí funciona
+  left: 0;
+  width: 100%;
+  z-index: 999;
 
+  @media (max-width: 992px) {
+    top: $altura-header-tablet;
+  }
 
+  @media (max-width: 576px) {
+    top: $altura-header-mobile;
+  }
+}
