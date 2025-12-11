@@ -2,7 +2,7 @@
 
 .menu-navegacion {
   background-color: $color-principal;
-  padding: $espaciado-sm $espaciado-lg;
+  padding: $espaciado-xs $espaciado-md;
   font-size: $font-md;
   font-weight: bold;
   position: sticky;
@@ -39,43 +39,80 @@
   }
 
   // Responsive ajustes
-  @media (max-width: 992px) {
-    .nav-link i.bi-search,
-    .nav-link i.bi-cart {
+// Responsive ajustes
+@media (max-width: 992px) {
+  .nav-link i.bi-search,
+  .nav-link i.bi-cart {
     font-size: 1.25rem; // íconos más grandes en tablet
-    }
+  }
 
-    #contadorCarrito {
+  #contadorCarrito {
     font-size: 0.7rem;
     top: 0.25rem;
     right: 0.25rem;
-    }
   }
 
-  @media (max-width: 576px) {
-    // Ajuste de altura del header en mobile
-    padding: $espaciado-xs $espaciado-sm; // menos padding
-    font-size: $font-sm; // texto más chico
+  // Ajustes del buscador en tablet
+  #buscador {
+    flex: 1 1 auto;        
+    max-width: 350px;      
+    margin-top: 0.5rem;    
+    display: flex;         
+    align-items: center;
+  }
+
+  #buscador input {
+    flex: 1;               
+    font-size: $font-sm;
+  }
+
+  #buscador button {
+    flex-shrink: 0;        
+    font-size: $font-sm;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .navbar-collapse {
+    flex-wrap: wrap;       
+    gap: 0.5rem;           
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-navegacion {
+    padding: 0.1rem 0.3rem;   
+    font-size: $font-sm;
+    line-height: 1.1;         
+
+    .navbar {
+    padding: 0 !important;
+    min-height: 40px;       
+    }
+
+    .navbar-brand img {
+    max-height: 24px;      
+    }
 
     .nav-link {
-    margin: 0 $espaciado-xs;
     font-size: $font-sm;
+    padding: 0.15rem 0.3rem; 
     }
 
     .nav-link i.bi-search,
     .nav-link i.bi-cart {
-    font-size: 1.2rem;
+    font-size: 0.85rem;     
     }
 
     #contadorCarrito {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.35rem;
-    top: 0;
-    right: 0;
+    font-size: 0.55rem;
+    padding: 0.1rem 0.25rem;
+    top: 0.05rem;
+    right: 0.05rem;
     }
   }
+}
 
-  // Estado reducido al hacer scroll
+    // Estado reducido al hacer scroll
   &.shrink {
     padding: $espaciado-xs $espaciado-lg;
     font-size: $font-sm;
@@ -88,8 +125,8 @@
 
 // Ajustes base de Bootstrap (estado normal)
 .navbar {
-  padding-top: 0.75rem;   // padding cómodo al inicio
-  padding-bottom: 0.75rem;
+  padding-top: 0.25rem;   // padding cómodo al inicio
+  padding-bottom: 0.25rem;
 }
 
 .navbar-brand img {

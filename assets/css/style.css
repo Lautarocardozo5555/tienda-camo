@@ -169,7 +169,7 @@ h2 {
 
 .menu-navegacion {
   background-color: #424242;
-  padding: 8px 32px;
+  padding: 4px 16px;
   font-size: 18px;
   font-weight: bold;
   position: sticky;
@@ -208,25 +208,53 @@ h2 {
     top: 0.25rem;
     right: 0.25rem;
   }
+  .menu-navegacion #buscador {
+    flex: 1 1 auto;
+    max-width: 350px;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .menu-navegacion #buscador input {
+    flex: 1;
+    font-size: 15px;
+  }
+  .menu-navegacion #buscador button {
+    flex-shrink: 0;
+    font-size: 15px;
+    padding: 0.25rem 0.5rem;
+  }
+  .menu-navegacion .navbar-collapse {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 }
 @media (max-width: 576px) {
-  .menu-navegacion {
-    padding: 4px 8px;
+  .menu-navegacion .menu-navegacion {
+    padding: 0.1rem 0.3rem;
     font-size: 15px;
+    line-height: 1.1;
   }
-  .menu-navegacion .nav-link {
-    margin: 0 4px;
+  .menu-navegacion .menu-navegacion .navbar {
+    padding: 0 !important;
+    min-height: 40px;
+  }
+  .menu-navegacion .menu-navegacion .navbar-brand img {
+    max-height: 24px;
+  }
+  .menu-navegacion .menu-navegacion .nav-link {
     font-size: 15px;
+    padding: 0.15rem 0.3rem;
   }
-  .menu-navegacion .nav-link i.bi-search,
-  .menu-navegacion .nav-link i.bi-cart {
-    font-size: 1.2rem;
+  .menu-navegacion .menu-navegacion .nav-link i.bi-search,
+  .menu-navegacion .menu-navegacion .nav-link i.bi-cart {
+    font-size: 0.85rem;
   }
-  .menu-navegacion #contadorCarrito {
-    font-size: 0.65rem;
-    padding: 0.15rem 0.35rem;
-    top: 0;
-    right: 0;
+  .menu-navegacion .menu-navegacion #contadorCarrito {
+    font-size: 0.55rem;
+    padding: 0.1rem 0.25rem;
+    top: 0.05rem;
+    right: 0.05rem;
   }
 }
 .menu-navegacion.shrink {
@@ -238,8 +266,8 @@ h2 {
 }
 
 .navbar {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .navbar-brand img {
@@ -333,10 +361,12 @@ h2 {
   text-align: center;
   position: relative;
   overflow: hidden;
+  margin-top: 0;
 }
 .banner .carousel-item img {
   width: 100%;
   height: auto;
+  min-height: 40vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -355,17 +385,18 @@ h2 {
 .banner .carousel-caption p {
   font-size: 18px;
 }
-.banner:hover .carousel-caption {
+.banner:hover .carousel-caption.visible {
   opacity: 1;
 }
 @media (max-width: 576px) {
   .banner .carousel-item img {
-    height: 250px;
+    width: 100%;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
   .banner .carousel-caption {
-    opacity: 1;
+    opacity: 0;
     position: absolute;
     bottom: 10%;
     left: 50%;
@@ -379,6 +410,9 @@ h2 {
   }
   .banner .carousel-caption p {
     font-size: 15px;
+  }
+  .banner .carousel-caption.visible {
+    opacity: 1;
   }
 }
 
