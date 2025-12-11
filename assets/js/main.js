@@ -14,6 +14,7 @@ function agregarAlCarrito() {
 contador++;
 document.getElementById("contadorCarrito").textContent = contador;
 }
+<<<<<<< HEAD
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".menu-navegacion");
@@ -47,4 +48,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     });
   });
+=======
+function activarCaptionMobile() {
+  if (window.innerWidth <= 576) { // solo mobile
+    document.querySelectorAll('.carousel-item').forEach(item => {
+    item.addEventListener('click', () => {
+    const caption = item.querySelector('.carousel-caption');
+    if (!caption) return;
+    caption.classList.toggle('visible');
+    });
+    });
+  }
+}
+
+// Ejecutar al cargar
+activarCaptionMobile();
+
+// Re-ejecutar si cambia el tamaño de pantalla
+window.addEventListener('resize', activarCaptionMobile);
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.menu-navegacion');
+  if (window.scrollY > 20) { // cuando bajás más de 20px
+    header.classList.add('shrink'); // ojo: corregí el typo
+  } else {
+    header.classList.remove('shrink');
+  }
+>>>>>>> b17aa25040fc0c460c501cc09d4f4b08d06ef06c
 });

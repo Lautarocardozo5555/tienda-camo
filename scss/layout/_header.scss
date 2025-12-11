@@ -2,33 +2,65 @@
 
 .menu-navegacion {
   background-color: $color-principal;
+<<<<<<< HEAD
   padding: $espaciado-xs $espaciado-md;
+=======
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: $espaciado-sm $espaciado-lg;
+>>>>>>> b17aa25040fc0c460c501cc09d4f4b08d06ef06c
   font-size: $font-md;
   font-weight: bold;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: all 0.3s ease;
+  transition: padding 0.3s ease;
+
+  &.shrink {
+    padding: $espaciado-xs $espaciado-md;
+
+    .navbar-brand img {
+    max-height: 90px;
+    }
+
+    .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    }
+  }
+
+  .navbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-brand img {
+    max-width: 300px;
+    max-height: 150px;
+    transition: max-width 0.3s ease, max-height 0.3s ease;
+  }
+
+  .navbar-toggler {
+    padding: 0.4rem 0.8rem;
+    transition: padding 0.3s ease;
+  }
 
   .nav-link {
     color: $color-fondo;
     margin: 0 $espaciado-sm;
+    font-size: 1.1rem;
 
-    &:hover {
-    color: $color-acento;
-    }
-
+    &:hover,
     &.active {
     color: $color-acento;
     }
 
-    // Íconos de lupa y carrito
     i.bi-search,
     i.bi-cart {
-    font-size: 1.2rem; // tamaño base
+    font-size: 1.3rem;
     }
   }
 
+<<<<<<< HEAD
   // Badge del carrito
   #contadorCarrito {
     position: absolute;
@@ -134,3 +166,81 @@
   height: auto;
   width: auto;
 }
+=======
+  // Tablet
+  @media (max-width: 992px) {
+    .navbar-brand img {
+    max-width: 200px;
+    max-height: 100px;
+    }
+
+    .navbar-toggler {
+    padding: 0.3rem 0.6rem;
+    }
+
+    .nav-link {
+    font-size: 1rem;
+
+    i.bi-search,
+    i.bi-cart {
+    font-size: 1.2rem;
+    }
+    }
+  }
+
+  // Mobile
+  @media (max-width: 576px) {
+    padding: 0.5rem 1rem;
+    font-size: $font-sm;
+
+    &.shrink {
+    padding: 0.25rem 0.75rem;
+
+    .navbar-brand img {
+    max-height: 50px;
+    }
+
+    .navbar-toggler {
+    padding: 0.2rem 0.4rem;
+    }
+    }
+
+    .navbar-brand img {
+    max-width: 180px;
+    max-height: 85px;
+    }
+
+    .navbar-toggler {
+    padding: 0.35rem 0.7rem;
+    }
+
+    .nav-link {
+    font-size: $font-sm;
+    margin: 0 $espaciado-xs;
+
+    i.bi-search,
+    i.bi-cart {
+    font-size: 1.1rem;
+    }
+    }
+  }
+}
+
+// Menú hamburguesa desplegable
+.navbar-collapse {
+  background-color: $color-principal;
+  position: fixed;  
+  top: $altura-header-desktop;  
+  left: 0;
+  width: 100%;
+  z-index: 998;
+
+  @media (max-width: 992px) {
+    top: $altura-header-tablet;
+  }
+
+  @media (max-width: 576px) {
+    top: $altura-header-mobile;
+  }
+}
+>>>>>>> b17aa25040fc0c460c501cc09d4f4b08d06ef06c
