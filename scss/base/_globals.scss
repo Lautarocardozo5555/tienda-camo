@@ -35,15 +35,4 @@ background-color: $color-fondo;
 color: $color-principal;
 }
 
-body {
-padding-top: $altura-header-desktop;
-
-@media (max-width: 992px) {
-    padding-top: $altura-header-tablet;
-}
-
-@media (max-width: 576px) {
-    padding-top: $altura-header-mobile;
-}
-}
 

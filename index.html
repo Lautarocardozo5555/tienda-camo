@@ -51,24 +51,21 @@
         </li>
 
         <!-- Carrito -->
-        <li class="nav-item">
-        <a class="nav-link position-relative" href="pages/carrito.html">
-        <i class="bi bi-cart"></i>
-        <span id="contadorCarrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-        </a>
-        </li>
-        <!-- Buscador oculto -->
-<form id="buscador" class="d-flex ms-2" style="display:none;" onsubmit="buscarProducto(event)">
-<input class="form-control form-control-sm me-2" type="search" id="inputBusqueda" placeholder="Buscar..." aria-label="Buscar">
-<button class="btn btn-outline-dark btn-sm" type="submit">Buscar</button>
-</form>
+<li class="nav-item">
+<a class="nav-link" href="pages/carrito.html">
+    <span class="icon-wrap">
+    <i class="bi bi-cart"></i>
+    <span id="contadorCarrito" class="badge rounded-pill bg-danger">0</span>
+    </span>
+</a>
+</li>
 
     </ul>
     </div>
     </div>
 </nav>
 </header>
-    <main>
+    <main id="contenido">
 <!-- Banner rotativo -->
 <section class="banner banner-fade">
 <div id="bannerCamo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">

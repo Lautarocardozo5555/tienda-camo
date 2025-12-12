@@ -95,20 +95,6 @@ h2 {
   color: #424242;
 }
 
-body {
-  padding-top: 115px;
-}
-@media (max-width: 992px) {
-  body {
-    padding-top: 115px;
-  }
-}
-@media (max-width: 576px) {
-  body {
-    padding-top: 115px;
-  }
-}
-
 .info-adicional {
   color: #424242;
   padding: 48px 16px;
@@ -183,177 +169,137 @@ body {
 
 .menu-navegacion {
   background-color: #424242;
-<<<<<<< HEAD
-  padding: 4px 16px;
-=======
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
   padding: 8px 32px;
->>>>>>> b17aa25040fc0c460c501cc09d4f4b08d06ef06c
   font-size: 18px;
   font-weight: bold;
-  transition: padding 0.3s ease;
-}
-.menu-navegacion.shrink {
-  padding: 4px 16px;
-}
-.menu-navegacion.shrink .navbar-brand img {
-  max-height: 90px;
-}
-.menu-navegacion.shrink .navbar-toggler {
-  padding: 0.25rem 0.5rem;
-}
-.menu-navegacion .navbar {
-  height: 100%;
-  display: flex;
-  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 .menu-navegacion .navbar-brand img {
-  max-width: 300px;
   max-height: 150px;
-  transition: max-width 0.3s ease, max-height 0.3s ease;
-}
-.menu-navegacion .navbar-toggler {
-  padding: 0.4rem 0.8rem;
-  transition: padding 0.3s ease;
+  transition: max-height 0.3s ease;
+  display: block;
 }
 .menu-navegacion .nav-link {
   color: #f5f5f5;
   margin: 0 8px;
-  font-size: 1.1rem;
+  transition: font-size 0.3s ease, padding 0.3s ease;
 }
-.menu-navegacion .nav-link:hover, .menu-navegacion .nav-link.active {
+.menu-navegacion .nav-link:hover {
+  color: #ccc;
+}
+.menu-navegacion .nav-link.active {
   color: #ccc;
 }
 .menu-navegacion .nav-link i.bi-search,
 .menu-navegacion .nav-link i.bi-cart {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+.menu-navegacion #contadorCarrito {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.4rem;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: -0.3rem;
+  right: -0.3rem;
+  z-index: 10;
+}
+.menu-navegacion.shrink {
+  padding: 4px 16px;
+  font-size: 18px;
+}
+.menu-navegacion.shrink .navbar-brand img {
+  max-height: 100px;
+}
+.menu-navegacion.shrink .nav-link {
+  font-size: 15px;
+  margin: 0 4px;
+  padding: 0.25rem 0.4rem;
+}
+.menu-navegacion.shrink .nav-link i.bi-search,
+.menu-navegacion.shrink .nav-link i.bi-cart {
+  font-size: 1rem;
+}
+.menu-navegacion.shrink #contadorCarrito {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.35rem;
 }
 @media (max-width: 992px) {
-  .menu-navegacion .navbar-brand img {
-    max-width: 200px;
-    max-height: 100px;
+  .menu-navegacion .nav-link i.bi-search,
+  .menu-navegacion .nav-link i.bi-cart {
+    font-size: 1.4rem;
   }
-<<<<<<< HEAD
-  .menu-navegacion #contadorCarrito {
+  .menu-navegacion .icon-wrap {
+    width: 26px;
+    height: 26px;
+  }
+  .menu-navegacion .icon-wrap #contadorCarrito {
     font-size: 0.7rem;
-    top: 0.25rem;
-    right: 0.25rem;
+    top: -0.25rem;
+    right: -0.25rem;
   }
-  .menu-navegacion #buscador {
-    flex: 1 1 auto;
-    max-width: 350px;
-    margin-top: 0.5rem;
-    display: flex;
-    align-items: center;
-  }
-  .menu-navegacion #buscador input {
-    flex: 1;
-    font-size: 15px;
-  }
-  .menu-navegacion #buscador button {
-    flex-shrink: 0;
-    font-size: 15px;
-    padding: 0.25rem 0.5rem;
-  }
-  .menu-navegacion .navbar-collapse {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-}
-@media (max-width: 576px) {
-  .menu-navegacion .menu-navegacion {
-    padding: 0.1rem 0.3rem;
-    font-size: 15px;
-    line-height: 1.1;
-  }
-  .menu-navegacion .menu-navegacion .navbar {
-    padding: 0 !important;
-    min-height: 40px;
-  }
-  .menu-navegacion .menu-navegacion .navbar-brand img {
-    max-height: 24px;
-  }
-  .menu-navegacion .menu-navegacion .nav-link {
-    font-size: 15px;
-    padding: 0.15rem 0.3rem;
-=======
-  .menu-navegacion .navbar-toggler {
-    padding: 0.3rem 0.6rem;
-  }
-  .menu-navegacion .nav-link {
-    font-size: 1rem;
->>>>>>> b17aa25040fc0c460c501cc09d4f4b08d06ef06c
-  }
-  .menu-navegacion .menu-navegacion .nav-link i.bi-search,
-  .menu-navegacion .menu-navegacion .nav-link i.bi-cart {
-    font-size: 0.85rem;
-  }
-<<<<<<< HEAD
-  .menu-navegacion .menu-navegacion #contadorCarrito {
-    font-size: 0.55rem;
-    padding: 0.1rem 0.25rem;
-    top: 0.05rem;
-    right: 0.05rem;
-=======
 }
 @media (max-width: 576px) {
   .menu-navegacion {
-    padding: 0.5rem 1rem;
+    padding: 4px 8px;
     font-size: 15px;
-  }
-  .menu-navegacion.shrink {
-    padding: 0.25rem 0.75rem;
-  }
-  .menu-navegacion.shrink .navbar-brand img {
-    max-height: 50px;
-  }
-  .menu-navegacion.shrink .navbar-toggler {
-    padding: 0.2rem 0.4rem;
   }
   .menu-navegacion .navbar-brand img {
-    max-width: 180px;
-    max-height: 85px;
-  }
-  .menu-navegacion .navbar-toggler {
-    padding: 0.35rem 0.7rem;
+    max-height: 70px;
   }
   .menu-navegacion .nav-link {
-    font-size: 15px;
     margin: 0 4px;
+    font-size: 15px;
+    padding: 0.25rem 0.4rem;
   }
   .menu-navegacion .nav-link i.bi-search,
   .menu-navegacion .nav-link i.bi-cart {
+    font-size: 1.3rem;
+  }
+  .menu-navegacion .icon-wrap {
+    width: 28px;
+    height: 28px;
+  }
+  .menu-navegacion .icon-wrap #contadorCarrito {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.35rem;
+    top: -0.2rem;
+    right: -0.2rem;
+  }
+  .menu-navegacion.shrink {
+    padding: 4px;
+  }
+  .menu-navegacion.shrink .navbar-brand img {
+    max-height: 60px;
+  }
+  .menu-navegacion.shrink .navbar-brand img .nav-link i.bi-search,
+  .menu-navegacion.shrink .navbar-brand img .nav-link i.bi-cart {
     font-size: 1.1rem;
->>>>>>> b17aa25040fc0c460c501cc09d4f4b08d06ef06c
   }
 }
-
-<<<<<<< HEAD
-.navbar {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-=======
-.navbar-collapse {
-  background-color: #424242;
-  position: fixed;
-  top: 115px;
-  left: 0;
-  width: 100%;
-  z-index: 998;
->>>>>>> b17aa25040fc0c460c501cc09d4f4b08d06ef06c
+.menu-navegacion .icon-wrap {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
 }
-@media (max-width: 992px) {
-  .navbar-collapse {
-    top: 115px;
-  }
+.menu-navegacion .icon-wrap i.bi-cart,
+.menu-navegacion .icon-wrap i.bi-search {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-@media (max-width: 576px) {
-  .navbar-collapse {
-    top: 115px;
-  }
+.menu-navegacion .icon-wrap #contadorCarrito {
+  position: absolute;
+  top: -0.2rem;
+  right: -0.2rem;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.35rem;
+  z-index: 10;
 }
 
 .footer {
@@ -441,11 +387,7 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
-<<<<<<< HEAD
   margin-top: 0;
-=======
-  z-index: 1;
->>>>>>> b17aa25040fc0c460c501cc09d4f4b08d06ef06c
 }
 .banner .carousel-item img {
   width: 100%;
