@@ -31,15 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 //scroll
 document.addEventListener('scroll', () => {
-    const header = document.querySelector('.menu-navegacion');
-    if (!header) return;
+  const header = document.querySelector('.menu-navegacion');
+  if (!header) return;
 
-    if (window.scrollY > 40) {
-      header.classList.add('shrink');
+  window.requestAnimationFrame(() => {
+    if (window.scrollY > 0) {
+    header.classList.add('shrink');
     } else {
-      header.classList.remove('shrink');
+    header.classList.remove('shrink');
     }
   });
-
+}, { passive: true });
 
 

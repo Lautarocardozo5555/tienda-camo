@@ -8,68 +8,63 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
-  //logo
-  .navbar-brand img{
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  .navbar-brand img {
     max-height: 150px;
-    transition: max-height 0.3s ease;
-    display: block;
   }
 
   .nav-link {
     color: $color-fondo;
     margin: 0 $espaciado-sm;
-    transition: font-size 0.3s ease, padding 0.3s ease;
 
-    &:hover {
-    color: $color-acento;
-    }
-
+    &:hover,
     &.active {
     color: $color-acento;
     }
 
-    // Íconos de lupa y carrito
     i.bi-search,
     i.bi-cart {
-    font-size: 1.2rem; // tamaño base
-    transition: all 0.3s ease;
+    font-size: 1.2rem;
     }
   }
 
-  // Badge del carrito
   #contadorCarrito {
     font-size: 0.75rem;
     padding: 0.2rem 0.4rem;
-    transition: all 0.3s ease;
     position: absolute;
     top: -0.3rem;
     right: -0.3rem;
     z-index: 10;
   }
-//reduccion al scrollear
-&.shrink{
-  padding: $espaciado-xs $espaciado-md;
-  font-size: $font-md;
-  .navbar-brand img{
+
+  &.shrink {
+    transform: scale(0.95);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+    .navbar-brand img {
     max-height: 100px;
-  }
-  .nav-link{
+    }
+
+    .nav-link {
     font-size: $font-sm;
     margin: 0 $espaciado-xs;
-    padding: 0.25rem 0.4rem;
-  }
-  .nav-link i.bi-search,
+    }
+
+    .nav-link i.bi-search,
     .nav-link i.bi-cart {
-    font-size: 1rem; // íconos más chicos al reducir
+    font-size: 1rem;
     }
 
     #contadorCarrito {
     font-size: 0.65rem;
     padding: 0.15rem 0.35rem;
     }
+  }
 
-}
+
+
   // Responsive ajustes tablet
   @media (max-width: 992px) {
     .nav-link i.bi-search,
@@ -98,7 +93,6 @@
     .nav-link {
     margin: 0 $espaciado-xs;
     font-size: $font-sm;
-    padding: 0.25rem 0.4rem;
     }
 
     .nav-link i.bi-search,
@@ -117,7 +111,8 @@
     }
   }
     &.shrink{
-    padding: $espaciado-xs;
+transform: scale(0.95);
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     .navbar-brand img{
     max-height: 60px;
     .nav-link i.bi-search,
